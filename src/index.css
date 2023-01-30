@@ -1,9 +1,10 @@
 
-/**vlv-villages version 1.00 - index.css - Features:
+/**vlv-villages version 1.01 - index.css - Features:
  * 
- *   --> Building initial css stylesheet.
+ *   --> Starting to build layout fro the porject.
  * 
- * Note: First page page component
+ * Note: setting styles for the body and activating 
+ * grid for the container `body of homepage`
  */
 
 *,
@@ -16,6 +17,8 @@
 
 body{
   font-family: 'Titillium Web', sans-serif;
+  line-height: 1.7;
+  background-color: var(--color-quarternary);
 }
 
 
@@ -50,6 +53,12 @@ body{
   /*section Padding**/
   --padding-section: 8vh 3vw;
 
+}
+
+.container{
+  display: grid;
+  /* 1100px / 10columns is equal to 11rem that is 110px and that will the max size of the columns**/
+  grid-template-columns: 1fr  repeat(10, minmax(min-content, 11rem)) 1fr;
 }
 
 
