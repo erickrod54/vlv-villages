@@ -1,13 +1,55 @@
-body {
+
+/**vlv-villages version 1.00 - index.css - Features:
+ * 
+ *   --> Building initial css stylesheet.
+ * 
+ * Note: First page page component
+ */
+
+*,
+*::before,
+*::after{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  font-family: 'Titillium Web', sans-serif;
 }
+
+
+:root{
+  font-size: 62.5%;
+
+  /* Main colors for the project **/
+
+  --color-primary:#730039;
+  --color-primary-light:hsla(330,100%,23%,0.85);
+  --color-primary-dark:hsla(330,100%,23%,0.85);
+
+  --color-secondary:#ffc513;
+  --color-secondary-light:hsla(45,100%,54%,0.55);
+  --color-secondary-dark:rgba(255,196,19,0.85);
+
+  --color-tertiary:#ff724c;
+  --color-tertiary-light:hsla(39,100%,65%,0.55);
+  --color-tertiary-dark:rgba(255,115,76,0.85);
+
+  --color-quarternary:#f6eedf;
+  --color-quarternary-light:hsla(39,56%,92%,0.6);
+  --color-quarternary-dark:hsla(39,56%,92%,0.85);
+
+  /* Transition duration **/
+
+  --transition-duration: 0.3s;
+
+  /*section title font size**/
+  --font-size-title: calc( 2rem + 2vw);
+
+  /*section Padding**/
+  --padding-section: 8vh 3vw;
+
+}
+
+
