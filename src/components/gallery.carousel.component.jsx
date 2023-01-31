@@ -3,7 +3,7 @@ import React from "react";
 const GalleryCarousel = () => {
 
     return(
-        <section className="gallery-carousel">
+        <section id="gallery-carousel">
             Gallery Carousel
         </section>
     )

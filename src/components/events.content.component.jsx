@@ -3,7 +3,7 @@ import React from "react";
 const EventsContent = () => {
 
     return(
-        <section className="events-content">
+        <section id="events-content">
             Events Content
         </section>
     )

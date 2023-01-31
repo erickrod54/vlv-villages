@@ -6,8 +6,8 @@ const EventsComponent = () => {
 
     return(
         <>
-            <EventsText /> 
             <EventsContent />
+            <EventsText /> 
         </>
     )
 }

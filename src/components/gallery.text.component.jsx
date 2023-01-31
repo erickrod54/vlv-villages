@@ -3,7 +3,7 @@ import React from "react";
 const GalleryText = () => {
 
     return(
-        <section className="galllery-text">
+        <section id="gallery-text">
             Gallery Text
         </section>
     )

@@ -3,7 +3,7 @@ import React from "react";
 const MottoComponent = () => {
 
     return(
-        <section className="motto">
+        <section id="motto">
             Motto Component
         </section>
     )

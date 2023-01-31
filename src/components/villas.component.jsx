@@ -3,7 +3,7 @@ import React from "react";
 const VillasComponent = () => {
 
     return(
-        <section className="villas">
+        <section id="villas">
             Villas Component
         </section>
     )

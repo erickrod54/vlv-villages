@@ -3,7 +3,7 @@ import React from "react";
 const EventsText = () => {
 
     return(
-        <section className="events-text">
+        <section id="events-text">
             Events Text
         </section>
     )
