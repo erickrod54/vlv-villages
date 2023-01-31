@@ -1,11 +1,13 @@
 
-/**vlv-villages version 1.02 - index.css - Features:
+/**vlv-villages version 1.03 - index.css - Features:
  * 
  *   --> work in progress Layout building.
  * 
  * Note: so far i have been defined layout 
  * for 'header', 'booking content', 
- *'booking date'
+ *'booking date', 'events-content', 
+ * villas, events-text, gallery-text, 
+ * gallery-carousel
  */
 
 *,
@@ -74,7 +76,7 @@ body{
 
 /*grabbing the children and changing the font-size**/
 .container > * {
-  font-size: 5rem;
+  font-size: 2rem;
 }
 
 /**Main Styling*/
@@ -88,11 +90,55 @@ header#header{
 section#booking-content{
   background-color: var(--color-secondary);
   grid-column: center-start / col-end 6;
+  height: 400px;
 }
 
 /*Booking date section ----**/
 section#booking-date{
   background-color: var(--color-tertiary);
   grid-column: col-start 7 / center-end;
+  height: 400px;
+}
+
+/*villas section ----**/
+section#villas{
+  background-color: var(--color-primary);
+  grid-column: container-start / container-end;
+  height: 400px;
+}
+
+/*motto section ----**/
+section#motto{
+  background-color: var(--color-secondary);
+  grid-column: container-start / container-end;
+  height: 400px;
+}
+
+/*events content ----**/
+section#events-content{ 
+  background-color: var(--color-tertiary);
+  grid-column: container-start / col-end 9;
+  height: 400px;
+}
+
+/*events content ----**/
+section#events-text{ 
+  background-color: var(--color-primary);
+  grid-column: col-start 10 / center-end;
+  height: 400px;
+}
+
+/*gallery text ----**/
+section#gallery-text{  
+  background-color: var(--color-secondary);
+  grid-column: center-start / col-end 1;
+  height: 400px;
+}
+
+/*gallery text ----**/
+section#gallery-carousel{  
+  background-color: var(--color-tertiary);
+  grid-column: col-start 2 / container-end;
+  height: 400px;
 }
 
