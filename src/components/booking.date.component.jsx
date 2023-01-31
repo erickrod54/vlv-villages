@@ -3,7 +3,7 @@ import React from "react";
 const BookingDate = () => {
 
     return(
-        <section className="booking-date">
+        <section id="booking-date">
             Booking Date
         </section>
     )

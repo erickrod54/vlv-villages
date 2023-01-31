@@ -7,7 +7,7 @@ const BookingComponent = () => {
     return(
         <>
             <BookingContent />
-            <BookingDate />            
+            <BookingDate />
         </>
     )
 }
