@@ -1,12 +1,11 @@
 
-/**vlv-villages version 1.01 - index.css - Features:
+/**vlv-villages version 1.02 - index.css - Features:
  * 
- *   --> Starting to build layout fro the porject.
+ *   --> work in progress Layout building.
  * 
- * Note: setting styles for the body and activating 
- * grid for the container `body of homepage`
- *
- * this is the start of vlv-villages layout
+ * Note: so far i have been defined layout 
+ * for 'header', 'booking content', 
+ *'booking date'
  */
 
 *,
@@ -59,8 +58,41 @@ body{
 
 .container{
   display: grid;
+  
   /* 1100px / 10columns is equal to 11rem that is 110px and that will the max size of the columns**/
-  grid-template-columns: 1fr  repeat(10, minmax(min-content, 11rem)) 1fr;
+  
+  /*here i name columns to start to span spaces for the different sections**/
+  grid-template-columns: 
+  [ container-start ] 1fr [center-start] repeat(
+    10,
+    [col-start] minmax(min-content, 11rem) [col-end]
+    ) 
+    [ center-end ] 1fr [ container-end ];
+
+  grid-template-rows: 100vh repeat(8, min-content);
 }
 
+/*grabbing the children and changing the font-size**/
+.container > * {
+  font-size: 5rem;
+}
+
+/**Main Styling*/
+header#header{
+  background-color: var(--color-primary);
+  grid-column: container-start / container-end;
+}
+
+
+/*Booking content section ----**/
+section#booking-content{
+  background-color: var(--color-secondary);
+  grid-column: center-start / col-end 6;
+}
+
+/*Booking date section ----**/
+section#booking-date{
+  background-color: var(--color-tertiary);
+  grid-column: col-start 7 / center-end;
+}
 
