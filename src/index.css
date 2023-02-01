@@ -1,13 +1,11 @@
 
-/**vlv-villages version 1.03 - index.css - Features:
+/**vlv-villages version 1.04 - index.css - Features:
  * 
- *   --> work in progress Layout building.
+ *   --> Grid Layout built.
  * 
- * Note: so far i have been defined layout 
- * for 'header', 'booking content', 
- *'booking date', 'events-content', 
- * villas, events-text, gallery-text, 
- * gallery-carousel
+ * Note: By this version the entire
+ *layout of the wbesite has been buil now
+ *i can proceed to build every section
  */
 
 *,
@@ -74,9 +72,33 @@ body{
   grid-template-rows: 100vh repeat(8, min-content);
 }
 
-/*grabbing the children and changing the font-size**/
-.container > * {
-  font-size: 2rem;
+a:link,
+a:visited {
+  color: var(--color-quarternary);
+  text-decoration: none;
+  font-size: calc(0.5rem + 1vw);
+  padding: 1rem 2rem;
+  border-radius: 0.3rem;
+  position: relative;
+  transition: all var(--transition-duration) cubic-bezier(1,0,0,1);
+  z-index: 1;
+}
+
+/**Paraghraps --------*/
+p{
+  color: white;
+  font-size: calc(1rem + 1vw);
+}
+
+/**ListItems --------*/
+li{
+  list-style: none;
+  margin-bottom: 4rem;
+}
+
+i{
+  font-size: var(--font-size-title);
+  color: var(--color-secondary);
 }
 
 /**Main Styling*/
@@ -142,3 +164,30 @@ section#gallery-carousel{
   height: 400px;
 }
 
+/*features content ----**/
+section#features-content{ 
+  background-color: var(--color-primary);
+  grid-column: container-start / col-end 9;
+  height: 400px;
+}
+
+/*features text ----**/
+section#features-text{ 
+  background-color: var(--color-secondary);
+  grid-column: col-start 10 / center-end;
+  height: 400px;
+}
+
+/*testimonials ----**/
+section#testimonials{ 
+  background-color: var(--color-tertiary);
+  grid-column: center-start / center-end;
+  height: 400px;
+}
+
+/*footer ----**/
+section#footer{ 
+  background-color: var(--color-primary);
+  grid-column: container-start / container-end;
+  height: 400px;
+}
