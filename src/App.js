@@ -1,18 +1,27 @@
 import React from "react";
-import HomePage from "./pages/home.page";
+import { HomePage, VillasPage, AboutPage, ContactPage } from './pages/index.pages'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-/**vlv-villages version 1.01 - index.css - Features:
+/**vlv-villages version 1.04 - App js - Features:
  * 
- *   --> Importing and placing 'HomePage'.
+ *   --> Implementing routing.
  * 
- * Note: First page page component
+ * Note: pending to implemnt the navigation by 
+ * building each page in detail
  */
 
 function App() {
   return (
     <>
       <h2>VLV - luxury villages</h2>
-      <HomePage />
+      <Router>
+        <Routes>
+          <Route path='/' element={<HomePage />}/>
+          <Route path='/villas-page' element={<VillasPage />}/>
+          <Route path='/about-page' element={<AboutPage />}/>
+          <Route path='/contact-page' element={<ContactPage />}/>
+        </Routes>
+      </Router>
     </>
   );
 }
