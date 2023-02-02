@@ -1,11 +1,10 @@
-
-/**vlv-villages version 1.04 - index.css - Features:
+/**vlv-villages version 1.06 - index.css - Features:
  * 
- *   --> Grid Layout built.
+ *   --> Work in progress 'nav' stlying.
  * 
- * Note: By this version the entire
- *layout of the wbesite has been buil now
- *i can proceed to build every section
+ * Note: 'nav' jsx tag is inside of header
+ *component, next steps will include to finish the
+ *the hamburger and 'nav' styling
  */
 
 *,
@@ -103,11 +102,35 @@ i{
 
 /**Main Styling*/
 header#header{
-  background-color: var(--color-primary);
+  background: linear-gradient(
+    var(--color-primary-light),
+    var(--color-primary-light)), 
+    url("assets/hero.jpg");
   grid-column: container-start / container-end;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
+/*Nav**/
+/*position fixed makes the navigation fixed
+*to the scroll behavior**/
+.header_main-nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
 
+.header_main-nav input[type=checkbox]{
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  height: 5rem;
+  width: 5rem;
+  /*opacity: 0;**/
+  cursor: pointer;
+}
 /*Booking content section ----**/
 section#booking-content{
   background-color: var(--color-secondary);
