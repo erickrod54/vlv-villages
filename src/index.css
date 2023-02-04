@@ -1,6 +1,7 @@
-/**vlv-villages version 1.06 - index.css - Features:
+/**vlv-villages version 1.07 - index.css - Features:
  * 
- *   --> Work in progress 'nav' stlying.
+ *   --> Work in progress 'hamburger' styles and
+ *       checkbox opacity.
  * 
  * Note: 'nav' jsx tag is inside of header
  *component, next steps will include to finish the
@@ -119,18 +120,84 @@ header#header{
   position: fixed;
   top: 0;
   left: 0;
+  /*this will put the navigation on top
+  *of everything**/
   z-index: 2;
 }
 
+/*styling the checkbox (check the nav)**/
 .header_main-nav input[type=checkbox]{
   position: absolute;
   top: 3rem;
   left: 3rem;
   height: 5rem;
   width: 5rem;
-  /*opacity: 0;**/
+  /*i make it not visible*/
+  opacity: 0;
   cursor: pointer;
+  /**using 'z-index', i place 'checkbox' on top of
+  *hamburger*/
+  z-index: 3;
 }
+
+/*this hamburger style is on top of the checkbox
+*so the user won't see the checkbox **/
+.header_main-nav--hamburger{
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  height: 5rem;
+  width: 5rem;
+  padding: 1rem;
+  background-color: var(--color-secondary);
+
+  display: grid;
+  place-items: center;
+}
+
+/*Hamburger Lines**/
+/*combinator selector apply styles to direct child 'div'**/
+.header_main-nav--hamburger > div {
+  position: relative;
+  height: 0.3rem;
+  width: 100%;
+  background-color: var(--color-quarternary);
+  display: grid;
+  place-items: center;
+  /*this transition is going to apply an animation later*/
+  transition: all var(--transition-duration) ease-in-out;
+}
+
+/*Hamburger bottom Lines**/
+
+.header_main-nav--hamburger > div::before, 
+.header_main-nav--hamburger > div::after{
+  content: '';
+  position: absolute;
+  top: -1rem;
+  width: 60%;
+  /*'inherit' takes 'height' value of his parent**/
+  height: inherit;
+  background-color: inherit;
+  z-index: 2;
+}
+
+.header_main-nav--hamburger > div::before{
+  left: 0;
+}
+
+.header_main-nav--hamburger > div::after{
+  top: 1rem;
+  right: 0;
+}
+
+/*Rotating the menu**/
+/*checked is a pseudo class selector**/
+/*the name of this syntax is 'attribute selector' or 'space combinator selector'*/
+.header_main-nav input[type=checkbox]:checked + .header_main-nav--hamburger > div{
+  transform: rotate(135deg);
+}
+
 /*Booking content section ----**/
 section#booking-content{
   background-color: var(--color-secondary);
