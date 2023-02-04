@@ -1,7 +1,7 @@
 /**vlv-villages version 1.07 - index.css - Features:
  * 
  *   --> Work in progress 'hamburger' styles and
- *       checkbox opacity.
+ *       nav 'displaying'.
  * 
  * Note: 'nav' jsx tag is inside of header
  *component, next steps will include to finish the
@@ -196,6 +196,72 @@ header#header{
 /*the name of this syntax is 'attribute selector' or 'space combinator selector'*/
 .header_main-nav input[type=checkbox]:checked + .header_main-nav--hamburger > div{
   transform: rotate(135deg);
+}
+
+.header_main-nav input[type=checkbox]:checked + .header_main-nav--hamburger > div::before {
+  left: 0;
+  top:0;
+  width: 100%;
+  transform: rotate(270deg);
+}
+
+/*this is the effect over that creates the cross*/
+.header_main-nav input[type=checkbox]:checked + .header_main-nav--hamburger > div::after {
+  opacity: 0;
+}
+
+.header_main-nav input[type=checkbox]:checked:hover + .header_main-nav--hamburger > div {
+  transform: rotate(405deg);
+}
+
+/*Links for the menu*/
+.header_main-nav--menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  overflow: hidden;
+
+  /*here i activate grid - so the links will be centered**/
+  display: grid;
+  place-items: center;
+}
+
+.header_main-nav--menu > div {
+  background-color: var(--color-secondary-dark);
+  height: 200%;
+  width: 200%;
+
+  display: grid;
+  place-items: center;
+
+  transform: scaleX(0);
+  transition: all var(--transition-duration) ease-in-out;
+}
+
+.header_main-nav--menu > div > div{
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/*displaying the menu when the checkbox is checked**/
+/* this is the general sibiling selector**/
+.header_main-nav input[type=checkbox]:checked ~ .header_main-nav--menu{
+  visibility: visible;
+}
+
+.header_main-nav input[type=checkbox]:checked ~ .header_main-nav--menu > div {
+  transform: scaleX(1);
+  transition-duration: 0.5s;
+}
+
+.header_main-nav input[type=checkbox]:checked ~ .header_main-nav--menu > div > div{
+  opacity: 1;
 }
 
 /*Booking content section ----**/
