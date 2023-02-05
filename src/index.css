@@ -1,7 +1,6 @@
-/**vlv-villages version 1.07 - index.css - Features:
+/**vlv-villages version 1.09 - index.css - Features:
  * 
- *   --> Work in progress 'hamburger' styles and
- *       nav 'displaying'.
+ *   --> Adding styles for the 'links'.
  * 
  * Note: 'nav' jsx tag is inside of header
  *component, next steps will include to finish the
@@ -150,6 +149,8 @@ header#header{
   width: 5rem;
   padding: 1rem;
   background-color: var(--color-secondary);
+  /*places the hamburger on top*/
+  z-index: 2;
 
   display: grid;
   place-items: center;
@@ -262,6 +263,32 @@ header#header{
 
 .header_main-nav input[type=checkbox]:checked ~ .header_main-nav--menu > div > div{
   opacity: 1;
+}
+
+/**this is the styles for the links --*/
+.header_main-nav--menu ul li a:link,
+.header_main-nav--menu ul li a:visited{
+  z-index: 5;
+  font-size: calc(1.5rem + 0.5vw);
+}
+
+.header_main-nav--menu ul li a:link::before,
+.header_main-nav--menu ul li a:visited::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transform: scaleY(0);
+  background-color: var(--color-primary-dark);
+  transition: transform var(--transition-duration) ease-in-out;
+}
+
+.header_main-nav--menu ul li a:hover::before,
+.header_main-nav--menu ul li a:active::before{
+  transform: scaleY(1);
 }
 
 /*Booking content section ----**/
