@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
+import { Images } from "./data";
 
-/**vlv-villages version 1.05 - context js -
+/**vlv-villages version 1.09 - context js -
  * Features:
  * 
- *   --> Testing context.
+ *   --> Prividing 'Images' array.
  * 
  * Note: Changes will be done later in this 
  * component
@@ -13,10 +14,11 @@ export const VLVillagesContext = React.createContext()
 
 export const VLVillagesProvider = ({ children }) => {
 
-    const message = 'vlv villages context success';
-
     return(
-        <VLVillagesContext.Provider value={{message}}>
+        <VLVillagesContext.Provider 
+            value={{
+                Images
+            }}>
             {children}
         </VLVillagesContext.Provider>
     )
