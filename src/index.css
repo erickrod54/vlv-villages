@@ -1,6 +1,8 @@
-/**vlv-villages version 1.09 - index.css - Features:
+/**vlv-villages version 1.10 - index.css - Features:
  * 
- *   --> Adding styles for the 'links'.
+ *   --> Adding styles for 'hambuerger' animation.
+ *
+ *   --> Adding styles for the header content.
  * 
  * Note: 'nav' jsx tag is inside of header
  *component, next steps will include to finish the
@@ -154,6 +156,23 @@ header#header{
 
   display: grid;
   place-items: center;
+
+  /*hamburger animation**/
+  animation: main-nav 2s;
+}
+
+/*hamburger animation**/
+@keyframes main-nav{
+  /*150rem is 1500px that's why is set like this**/
+   0%{
+      transform: translateX(150rem) rotate(1800deg);
+      opacity: 0;
+   }
+
+   100%{
+      transform: translateX(0) rotate(0);
+      opacity: 1;
+   }
 }
 
 /*Hamburger Lines**/
@@ -289,6 +308,70 @@ header#header{
 .header_main-nav--menu ul li a:hover::before,
 .header_main-nav--menu ul li a:active::before{
   transform: scaleY(1);
+}
+
+.header_logo-content{
+  display: grid;
+  /**giving '1fr' to the sides they are going to shrink first nad the center at last using 'minmax'*/
+  grid-template-columns: 1fr minmax(30rem, 1fr) 1fr;
+  grid-template-rows: min-content;
+  height: 90%;
+  justify-items: center;
+}
+
+.header_logo-content--logo{
+  grid-column: 2 / 3;
+  letter-spacing: 0.2rem;
+}
+
+.header_logo-content--logo span {
+  color: var(--color-tertiary);
+  font-size: 3rem;
+  font-family:'Times New Roman', Times, serif;
+}
+
+.header_logo-content--content{
+  grid-column: 1 / -1;
+  align-self: center;
+}
+
+.header_logo-content--title{
+  font-size: calc(4rem + 4vw);
+  font-weight: 300;
+  color: white;
+  text-transform: uppercase;
+  padding: 0.2rem 0 var(--font-size-title);
+}
+
+.header_logo-content--para{
+  font-size: calc(1rem + 2vw);
+  font-weight: 500;
+  padding: 2vh 2rem 6vh var(--font-size-title);
+}
+
+.header_logo-content--link:link,
+.header_logo-content--link:visited {
+  margin-left: var(--font-size-title);
+  border: 0.2rem solid var(--color-tertiary);
+}
+
+.header_logo-content--link:link::before,
+.header_logo-content--link:visited::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-tertiary);
+  transform: scaleX(0);
+  transition: transform 0.45s cubic-bezier(1,0,0,1);
+  z-index: -1;
+}
+
+.header_logo-content--link:hover::before,
+.header_logo-content--link:active::before{
+  transform: scaleX(1);
 }
 
 /*Booking content section ----**/
