@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import { Images } from "./data";
+import { Images, mainNavLinks } from "./data";
 
-/**vlv-villages version 1.09 - context js -
+/**vlv-villages version 1.11 - context js -
  * Features:
  * 
- *   --> Prividing 'Images' array.
+ *   --> Prividing 'mainNavLinks' array.
  * 
  * Note: Changes will be done later in this 
  * component
@@ -17,7 +17,8 @@ export const VLVillagesProvider = ({ children }) => {
     return(
         <VLVillagesContext.Provider 
             value={{
-                Images
+                Images,
+                mainNavLinks
             }}>
             {children}
         </VLVillagesContext.Provider>
