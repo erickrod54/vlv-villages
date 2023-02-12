@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useVLVillagesContext } from "../context";
 
-/**vlv-villages version 1.09 - HeaderComponent -
+/**vlv-villages version 1.11 - HeaderComponent -
  * Features:
  * 
- *   --> Building all header content.
+ *   --> Destructuring 'mainNavLinks' from the 
+ *       context.
  * 
  * Note: Pending to make it dynamic by implementing
  * an array with the links, and set the background 
@@ -13,6 +15,7 @@ import { Link } from "react-router-dom";
 
 const HeaderComponent = () => {
 
+    const { mainNavLinks } = useVLVillagesContext();
 
     return(
         <header id="header">
@@ -22,18 +25,14 @@ const HeaderComponent = () => {
                 <div className="header_main-nav--menu">
                     <div>
                         <div>
-                            <ul>
-                                <li><Link to='#'>home</Link></li>
-                            </ul>
-                            <ul>
-                                <li><Link to='#'>villas</Link></li>
-                            </ul>
-                            <ul>
-                                <li><Link to='#'>about</Link></li>
-                            </ul>
-                            <ul>
-                                <li><Link to='#'>contact</Link></li>
-                            </ul>
+                            {mainNavLinks.map((link) => {
+                                const {id, linkname } = link;
+                                return(
+                                    <ul key={id}>
+                                        <li><Link to='#'>{linkname}</Link></li>
+                                    </ul>
+                                )
+                            })}
                         </div>
                     </div>
                 </div>
