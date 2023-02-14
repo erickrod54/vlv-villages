@@ -7,5 +7,16 @@ import GalleryComponent from "./gallery.component";
 import FeaturesComponent from "./features.component";
 import Testimonials from "./testimonials.section";
 import FooterComponent from "./footer.component";
+import LogoComponent from "./logo.component";
 
-export { HeaderComponent, BookingComponent, VillasComponent, MottoComponent, EventsComponent, GalleryComponent, FeaturesComponent, Testimonials, FooterComponent };
+/**vlv-villages version 1.13 - index.components -
+ * Features:
+ * 
+ *   --> Importing and exporting 'LogoComponent'.
+ * 
+ * Note: Pending to make it dynamic by implementing
+ * an array with the links, and set the background 
+ * image 'hero'
+ */
+
+export { HeaderComponent, BookingComponent, VillasComponent, MottoComponent, EventsComponent, GalleryComponent, FeaturesComponent, Testimonials, FooterComponent, LogoComponent };
