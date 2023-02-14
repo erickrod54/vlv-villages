@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useVLVillagesContext } from "../context";
-
-/**vlv-villages version 1.11 - HeaderComponent -
+import { LogoComponent } from '../components/index.components';
+ 
+/**vlv-villages version 1.13 - HeaderComponent -
  * Features:
  * 
- *   --> Destructuring 'mainNavLinks' from the 
- *       context.
+ *   --> Importing and placing 'LogoComponent'.
  * 
  * Note: Pending to make it dynamic by implementing
  * an array with the links, and set the background 
@@ -38,9 +38,7 @@ const HeaderComponent = () => {
                 </div>
             </nav>
             <div className="header_logo-content">
-                <a href="#" className="header_logo-content--logo">
-                    <span>V</span>L<span>V</span>
-                </a>
+                <LogoComponent />
 
                 <div className="header_logo-content--content">
                     <h1 className="header_logo-content--title">Relax your soul</h1>
