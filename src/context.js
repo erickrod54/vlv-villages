@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import { Images, mainNavLinks } from "./data";
+import { BookingIcons, Images, mainNavLinks } from "./data";
 
-/**vlv-villages version 1.11 - context js -
+/**vlv-villages version 1.15 - context js -
  * Features:
  * 
- *   --> Prividing 'mainNavLinks' array.
+ *   --> Importing and providing 'BookingIcons'.
  * 
  * Note: Changes will be done later in this 
  * component
@@ -18,7 +18,8 @@ export const VLVillagesProvider = ({ children }) => {
         <VLVillagesContext.Provider 
             value={{
                 Images,
-                mainNavLinks
+                mainNavLinks,
+                BookingIcons
             }}>
             {children}
         </VLVillagesContext.Provider>
