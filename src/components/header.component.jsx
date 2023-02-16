@@ -2,15 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useVLVillagesContext } from "../context";
 import { LogoComponent } from '../components/index.components';
- 
-/**vlv-villages version 1.13 - HeaderComponent -
+ import { HeaderContent } from '../components/index.components';
+
+/**vlv-villages version 1.14 - HeaderComponent -
  * Features:
  * 
- *   --> Importing and placing 'LogoComponent'.
+ *   --> Importing and placing 'HeaderContent'.
  * 
- * Note: Pending to make it dynamic by implementing
- * an array with the links, and set the background 
- * image 'hero'
+ * Note: Converting 'HeaderComponent' Component
+ * in small Components
  */
 
 const HeaderComponent = () => {
@@ -39,12 +39,7 @@ const HeaderComponent = () => {
             </nav>
             <div className="header_logo-content">
                 <LogoComponent />
-
-                <div className="header_logo-content--content">
-                    <h1 className="header_logo-content--title">Relax your soul</h1>
-                    <p className="header_logo-content--para">The team of VLV welcomes you. Start relaxing your soul and enjoy your stay</p>
-                    <a href="#" className="header_logo-content--link">Discover more</a>
-                </div>
+                <HeaderContent />
             </div>
         </header>
     )
