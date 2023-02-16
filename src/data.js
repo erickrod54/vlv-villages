@@ -1,13 +1,37 @@
 import { hero } from "./assets/index.assets";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSun, faClock } from "@fortawesome/free-regular-svg-icons";
 
-/**vlv-villages version 1.11 - data js -
+/**vlv-villages version 1.15 - data js -
  * Features:
  * 
- *   --> Building 'mainNavLinks' for navigation links.
+ *   --> Importing 'FontAwesomeIcon' Component.
+ * 
+ *   --> Importing 'weather' and 'sun 'icons
+ * 
+ *   --> Building 'BookingIcons' array.   
  * 
  * Note: in this file will have place all data
  * related with the app
  */
+
+ export const weather = <FontAwesomeIcon icon={faSun} />
+ export const time = <FontAwesomeIcon icon={faClock} />
+
+ export const BookingIcons = [
+    {
+        id:1,
+        name:weather,
+        temperature:'24',
+        grade:'&#8451;',
+        url:'#'
+    },{
+        id:2,
+        name:time,
+        time:'05:00 PM',
+        url:'#'
+    }
+]
 
 export const Images = [
     {   
