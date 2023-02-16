@@ -1,8 +1,6 @@
-/**vlv-villages version 1.10 - index.css - Features:
+/**vlv-villages version 1.15 - index.css - Features:
  * 
- *   --> Adding styles for 'hambuerger' animation.
- *
- *   --> Adding styles for the header content.
+ *   --> Writting 'Media queries' for the header.
  * 
  * Note: 'nav' jsx tag is inside of header
  *component, next steps will include to finish the
@@ -457,3 +455,21 @@ section#footer{
   grid-column: container-start / container-end;
   height: 400px;
 }
+
+/*Media queries for the header  -- start**/
+@media screen and (max-width:1000px){
+    /*all hte links**/
+    a:link,
+    a:visited{
+      font-size: calc(1rem + 1vw);
+    }
+}
+
+@media screen and (max-width:600px){
+  /*all hte links**/
+  .header_logo-content--para{
+    font-size: 2rem;
+  }
+}
+
+/*Media queries for the header  -- end**/
