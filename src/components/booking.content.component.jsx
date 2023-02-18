@@ -1,12 +1,15 @@
 import React from "react";
+import styled from "styled-components";
 import { useVLVillagesContext } from "../context";
 
-/**vlv-villages version 1.15 - data js -
+/**vlv-villages version 1.16 - BookingContent -
  * Features:
  * 
- *   --> Building 'BookingContent' Component.
+ *   --> Destructuring 'BookingIcons' and 
+ *       assign variables    
  * 
- *   --> Testing 'BookingIcons' from the context.    
+ *   --> Building 'BookingIconsWrapper' to 
+ *      set simple styles   
  * 
  * Note: in this file will have place all data
  * related with the app
@@ -18,6 +21,12 @@ const BookingContent = () => {
 
     console.log('these are the icons of Booking ==>', BookingIcons)
 
+    const weatherIcon = BookingIcons[0].icon;
+    const temperature = BookingIcons[0].temperature;
+
+    const timeIcon = BookingIcons[1].icon;
+    const time = BookingIcons[1].time;
+
     return(
         <section id="booking-content">
             <h2 className="booking-content_title">Discover Serenity</h2>
@@ -28,11 +37,32 @@ const BookingContent = () => {
             </p>
 
             <div className="booking-content_icons">
-                <div className="booking-content_icons--weather"></div>
-                <div className="booking-content_icons--time"></div>
+                <BookingIconsWrapper>
+                    <div className="booking-content_icons--weather">
+                        {weatherIcon}
+                        <p>
+                            {temperature}
+                            <sup>&#8451;</sup>
+                        </p>
+                        
+                    </div>
+                    <div className="booking-content_icons--time">
+                        {timeIcon}
+                        <p>
+                            {time}
+                        
+                        </p>
+                    </div>
+                </BookingIconsWrapper>
             </div>            
         </section>
     )
 }
+
+const BookingIconsWrapper = styled.div`
+    svg{
+        font-size: 4rem;
+    }
+`
 
 export default BookingContent;
