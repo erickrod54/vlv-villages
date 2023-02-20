@@ -1,7 +1,7 @@
-/**vlv-villages version 1.18 - index.css - Features:
+/**vlv-villages version 1.19 - index.css - Features:
  * 
- *   --> Migrating styles for 'booking.content'
- *       component.
+ *   --> Changing 'font-weight' to all paragraphs
+ *       and get better readibility.
  * 
  * Note: pending to migrate styles to their own
  *style component
@@ -87,6 +87,7 @@ a:visited {
 p{
   color: white;
   font-size: calc(1rem + 1vw);
+  font-weight: 200;
 }
 
 /**ListItems --------*/
