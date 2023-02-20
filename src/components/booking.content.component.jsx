@@ -2,14 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { useVLVillagesContext } from "../context";
 
-/**vlv-villages version 1.16 - BookingContent -
+/**vlv-villages version 1.17 - BookingContent -
  * Features:
  * 
- *   --> Destructuring 'BookingIcons' and 
- *       assign variables    
- * 
- *   --> Building 'BookingIconsWrapper' to 
- *      set simple styles   
+ *   --> Building simple styel component for 
+ *      later use  
  * 
  * Note: in this file will have place all data
  * related with the app
@@ -37,9 +34,9 @@ const BookingContent = () => {
             </p>
 
             <div className="booking-content_icons">
-                <BookingIconsWrapper>
+                
                     <div className="booking-content_icons--weather">
-                        {weatherIcon}
+                            {weatherIcon}
                         <p>
                             {temperature}
                             <sup>&#8451;</sup>
@@ -47,13 +44,12 @@ const BookingContent = () => {
                         
                     </div>
                     <div className="booking-content_icons--time">
-                        {timeIcon}
+                            {timeIcon}
                         <p>
                             {time}
-                        
                         </p>
                     </div>
-                </BookingIconsWrapper>
+                
             </div>            
         </section>
     )
