@@ -1,15 +1,28 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import { useVLVillagesContext } from "../context";
 
-/**vlv-villages version 1.20 - BookingDate - Features:
+/**vlv-villages version 2.00 - BookingDate - Features:
  * 
- *   --> Building 'BookingDate' Component.
+ *   --> Destructuring and testing 'BookingDateData'.
+ *       from the context.
  * 
- * Note: pending to migrate styles to their own
- *style component
+ * Note: pending to create constants to place data in JSX
  */
 
 const BookingDate = () => {
+
+    const { BookingDateData } = useVLVillagesContext()
+
+    console.log('this is then booking data ==>', BookingDateData)
+
+    /**Arrival data */
+
+    /**Departure data */
+
+    /**Guest data */
+
+    /**Reservation data */
 
     return(
         <section id="booking-date">
