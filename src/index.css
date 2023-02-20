@@ -1,6 +1,6 @@
-/**vlv-villages version 1.17 - index.css - Features:
+/**vlv-villages version 1.18 - index.css - Features:
  * 
- *   --> Writting styles for 'booking.content'
+ *   --> Migrating styles for 'booking.content'
  *       component.
  * 
  * Note: pending to migrate styles to their own
@@ -372,9 +372,8 @@ header#header{
   transform: scaleX(1);
 }
 
-/*Booking content section ---- start**/
 
-/*this styles are going to be placed in the style component**/
+/*Booking content section ---- start**/
 
 section#booking-content{
   grid-column: center-start / col-end 6;
@@ -383,55 +382,6 @@ section#booking-content{
   grid-template-rows: repeat(3, max-content);
   grid-gap: 2vh;
 }
-
-.booking-content_title{
-  font-size: var(--font-size-title);
-  padding: 0 2rem 1rem;
-  font-weight: 300;
-  position: relative;
-}
-
-/*this is the line below the main title**/
-.booking-content_title::after{
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 15%;
-  /*the height of the line**/
-  height: 0.2rem;
-  width: 30%;
-  background-color: var(--color-secondary);
-}
-
-.booking-content_para{
-  padding: 2rem;
-}
-
-section#booking-content p {
-  color: var(--color-primary);
-}
-
-.booking-content_icons{
-  margin-left: 2rem;
-
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.booking-content_icons--weather,
-.booking-content_icons--time{
-  display: grid;
-  grid-template-columns: 0.5fr 1fr;
-  grid-template-rows: 10vh;
-  place-items: center;
-}
-
-svg{
-  font-size: 4rem;
-  color: var(--color-secondary);
-}
-
-/*Booking content section ---- end**/
 
 /*Booking date section ----**/
 section#booking-date{
