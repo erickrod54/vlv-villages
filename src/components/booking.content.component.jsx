@@ -2,14 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import { useVLVillagesContext } from "../context";
 
-/**vlv-villages version 1.18 - BookingContent -
+/**vlv-villages version 1.19 - BookingContent -
  * Features:
  * 
- *   --> Wrapping content of 'booking-content' 
- *       with 'BookingIconsWrapper'
+ *   --> Applying the 'alignment fundamental'.
  * 
- * Note: By this version the components styles 
- * are migarted
+ * Note: The 'alignment fundamental' has been 
+ * appliying to the icons with the paragraphs
  */
 
 const BookingContent = () => {
@@ -98,7 +97,10 @@ const BookingIconsWrapper = styled.div`
   display: grid;
   grid-template-columns: 0.5fr 1fr;
   grid-template-rows: 10vh;
-  place-items: center;
+  
+  /**changed to apply the 'alignment fundamental' */
+  justify-items: start;
+  align-items: center;
 }
 
 svg{
