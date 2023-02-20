@@ -2,15 +2,41 @@ import { hero } from "./assets/index.assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faClock } from "@fortawesome/free-regular-svg-icons";
 
-/**vlv-villages version 1.16 - data js -
+/**vlv-villages version 2.00 - data js -
  * Features:
  * 
- *   --> Adding 'name' and 'icond field' 
- *      for BookingIcons.   
+ *   --> Building 'BookingDateData'.   
  * 
  * Note: in this file will have place all data
  * related with the app
  */
+
+export const BookingDateData = [
+    {
+        id:1,
+        title:'Arrival',
+        month:'May',
+        day:'09'
+    },
+    {
+        id:2,
+        title:'Departure',
+        month:'May',
+        day:'23'
+    },
+    {
+        id:3,
+        title:'Guests',
+        guestnumber:'01',
+    },
+    {
+        id:4,
+        title:'Make a Reservation',
+        phonetitle:'Reservation Hotline',
+        phone:'+1-5263-8965-6547',
+        reservation:'Reservation Assistance Available 24 hours'
+    },
+]
 
  export const weather = <FontAwesomeIcon icon={faSun} />
  export const time = <FontAwesomeIcon icon={faClock} />
