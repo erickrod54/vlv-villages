@@ -2,10 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { useVLVillagesContext } from "../context";
 
-/**vlv-villages version 1.19 - BookingContent -
+/**vlv-villages version 2.03 - BookingContent -
  * Features:
  * 
- *   --> Applying the 'alignment fundamental'.
+ *   --> Migrating '.booking-content_title::after'
+ *      to global styles index css.
  * 
  * Note: The 'alignment fundamental' has been 
  * appliying to the icons with the paragraphs
@@ -63,18 +64,6 @@ const BookingIconsWrapper = styled.div`
   padding: 0 2rem 1rem;
   font-weight: 300;
   position: relative;
-}
-
-/*this is the line below the main title**/
-.booking-content_title::after{
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 15%;
-  /*the height of the line**/
-  height: 0.2rem;
-  width: 30%;
-  background-color: var(--color-secondary);
 }
 
 .booking-content_para{
