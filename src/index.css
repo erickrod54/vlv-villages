@@ -1,10 +1,13 @@
-/**vlv-villages version 2.02 - index.css - Features:
+/**vlv-villages version 2.03 - index.css - Features:
  * 
- *   --> Migrating styles for 'Booking date'
- *       Component.
+ *   --> Migrating styles '.booking-content_title::after'
+ *       from 'booking content' to global.
+ *
+ *   --> Building media query for 800px. 
  * 
- * Note: pending to migrate styles to their own
- *style component
+ * Note: this last styles '.booking-content_title::after'
+ * beacause they cannot be keept in the component style 
+ *if i want to affect his behavior.
  */
 
 *,
@@ -384,6 +387,18 @@ section#booking-content{
   grid-gap: 2vh;
 }
 
+/*this is the line below the main title**/
+.booking-content_title::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  /*the height of the line**/
+  height: 0.2rem;
+  width: 30%;
+  background-color: var(--color-secondary);
+}
+
 /*Booking content section ---- end* - global styles */
 
 
@@ -476,6 +491,39 @@ section#footer{
     a:visited{
       font-size: calc(1rem + 1vw);
     }
+}
+
+/*Media queries for the BookingDate  -- start**/
+@media screen and (max-width: 800px){
+  section#booking-content{
+    padding: 4vh 3vw;
+    grid-column: center-start / center-end;
+  }
+  
+  .booking-content_title::after{
+    width: 20%;
+    left: 40%;
+  }
+
+  .booking-content_title{
+    text-align: center;
+  }
+  
+  section#booking-date{
+    padding: 4vh 3vw;
+    grid-column: center-start / center-end;
+    grid-row-gap: 7vh;
+  }
+
+  .booking-date_schedule--arrival > div,
+  .booking-date_schedule--departure > div,
+  .booking-date_schedule--guests > div{
+    padding: 2rem;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: min-content;
+    grid-column-gap: 2vw;
+    place-items: center;
+  }
 }
 
 @media screen and (max-width:600px){
