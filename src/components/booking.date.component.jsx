@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom';
 import styled from "styled-components";
 import { useVLVillagesContext } from "../context";
 
-/**vlv-villages version 2.02 - BookingDate - Features:
+/**vlv-villages version 2.04 - BookingDate - Features:
  * 
- *   --> Placing styles for 'BookingDate' is its own
- *       Component.
+ *   --> Building a 400px media query for 
+ *      'booking-date_schedule'.
  * 
- * Note: pending to create constants to place data in JSX
+ * Note: this media query makes 'booking-date_schedule'
+ * 1 column and three rows for smaller screens
  */
 
 const BookingDate = () => {
@@ -166,6 +167,20 @@ const BookingDateWrapper = styled.div`
     }
 
     /*Booking date section ---- end**/
+
+@media screen and (max-width:400px){
+  /*all hte links**/
+    .booking-date_schedule{
+        grid-template-rows: repeat(3,1fr);
+        grid-template-columns: auto;
+        grid-row-gap: 4vh;
+    }
+
+    .booking-date_contact{
+        justify-self: center;
+        padding: 0.2rem;
+    }
+}
 `
 
 export default BookingDate;
