@@ -1,9 +1,6 @@
-/**vlv-villages version 2.03 - index.css - Features:
- * 
- *   --> Migrating styles '.booking-content_title::after'
- *       from 'booking content' to global.
+/**vlv-villages version 2.04 - index.css - Features:
  *
- *   --> Building media query for 800px. 
+ *   --> Building media query for 600px for 'booking-content_para'. 
  * 
  * Note: this last styles '.booking-content_title::after'
  * beacause they cannot be keept in the component style 
@@ -515,6 +512,10 @@ section#footer{
     grid-row-gap: 7vh;
   }
 
+  section#booking-date{
+    grid-template-columns: repeat(2,max-content);
+  }
+
   .booking-date_schedule--arrival > div,
   .booking-date_schedule--departure > div,
   .booking-date_schedule--guests > div{
@@ -529,7 +530,11 @@ section#footer{
 @media screen and (max-width:600px){
   /*all hte links**/
   .header_logo-content--para{
-    font-size: 2rem;
+    font-size: 8rem;
+  }
+
+  .booking-content_para{
+    font-size: 2.5rem;
   }
 }
 
