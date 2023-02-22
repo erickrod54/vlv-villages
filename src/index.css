@@ -1,10 +1,12 @@
-/**vlv-villages version 2.04 - index.css - Features:
+/**vlv-villages version 2.06 - index.css - Features:
  *
- *   --> Building media query for 600px for 'booking-content_para'. 
+ *   --> work in progress in 'villa section'. 
+ *
+ *   --> work in progress to make button 'link' 
+ *       styles. 
  * 
- * Note: this last styles '.booking-content_title::after'
- * beacause they cannot be keept in the component style 
- *if i want to affect his behavior.
+ * Note: Implementing 'caret selector' to select
+ *all the villas divs and apply them styles.
  */
 
 *,
@@ -410,13 +412,79 @@ section#booking-date{
 /*Booking date section ---- end - global styles**/
 
 
+/*villas section ---- start - global styles**/
 
-/*villas section ----**/
 section#villas{
   background-color: var(--color-primary);
   grid-column: container-start / container-end;
-  height: 400px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  /*grid-gap: 2rem;**/
+
 }
+
+/** Caret selector -to select all villas-${id} -*/
+div[class^=villas]{
+  padding: 2rem;
+  /*background-position: center;*/
+  /*background-size: cover;**/
+  transition: transform var(--transition-duration) ease-in-out;
+}
+
+div[class^=villas]:hover,
+div[class^=villas]:active{
+  transform: scale(1.05);
+}
+
+div[class^=villas] h2[class^=villas]{
+  font-size: var(--font-size-title);
+  /*with this padding i align the title with the paragraph**/
+  padding: 0.2rem 1rem -1;
+  font-weight: 400;
+  color: white;
+  text-transform: uppercase;
+}
+
+div[class^=villas] p{
+  font-size: 2rem;
+  margin: 1.5rem 0 4rem 0;
+  color: white;
+  font-weight: 500;
+}
+
+div[class^=villas] a:link,
+div[class^=villas] a:visited{
+  /*is 'inline-block' in order to be able to apply margin*/
+  display: inline-block;
+  margin-bottom: 2rem;
+  background-color: white;
+  color: var(--color-primary);
+  z-index: 2;
+  /*overflow: hidden;*/
+}
+
+div[class^=villas] a:hover,
+div[class^=villas] a:active{
+  color: white;
+}
+
+div[class^=villas] a:link::before,
+div[class^=villas] a:visited::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: var(--color-secondary);
+  transition: height var(--transition-duration) ease-in-out;
+
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/*villas section ---- end - global styles**/
 
 /*motto section ----**/
 section#motto{
