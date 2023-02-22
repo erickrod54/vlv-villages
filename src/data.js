@@ -2,15 +2,53 @@ import { hero } from "./assets/index.assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faClock } from "@fortawesome/free-regular-svg-icons";
 
-/**vlv-villages version 2.00 - data js -
+/**vlv-villages version 2.06 - data js -
  * Features:
  * 
- *   --> Building 'BookingDateData'.   
+ *   --> Building 'villasData'.   
  * 
  * Note: in this file will have place all data
  * related with the app
  */
 
+export const villasData = [
+    {
+        id:1,
+        villaname:'Standard Villa',
+        price:'Starting at $200',
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut consequat semper viverra nam libero justo. Leo vel orci porta non pulvinar neque laoreet suspendisse'
+    },
+    {
+        id:2,
+        villaname:'Superior Villa',
+        price:'Starting at $350',
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut consequat semper viverra nam libero justo. Leo vel orci porta non pulvinar neque laoreet suspendisse.'
+    },
+    {
+        id:3,
+        villaname:'Infinity Villa',
+        price:'Starting at $700',
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut consequat semper viverra nam libero justo. Leo vel orci porta non pulvinar neque laoreet suspendisse.'
+    },
+    {
+        id:4,
+        villaname:'Ultra Villa',
+        price:'Starting at 1100.00',
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut consequat semper viverra nam libero justo. Leo vel orci porta non pulvinar neque laoreet suspendisse.'
+    },
+    {
+        id:5,
+        villaname:'Galactic Villa',
+        price:'Starting at $1300.00',
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut consequat semper viverra nam libero justo. Leo vel orci porta non pulvinar neque laoreet suspendisse.'
+    },
+    {
+        id:6,
+        villaname:'Cosmic Villa',
+        price:'Starting at $1500.00',
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut consequat semper viverra nam libero justo. Leo vel orci porta non pulvinar neque laoreet suspendisse.'
+    },
+]            
 export const BookingDateData = [
     {
         id:1,
