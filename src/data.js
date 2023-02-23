@@ -1,15 +1,44 @@
-import { hero } from "./assets/index.assets";
+import { hero, villa1, villa2, villa3, villa4, villa5, villa6 } from "./assets/index.assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faClock } from "@fortawesome/free-regular-svg-icons";
 
-/**vlv-villages version 2.06 - data js -
+/**vlv-villages version 2.08 - data js -
  * Features:
  * 
- *   --> Building 'villasData'.   
+ *   --> Building 'villasBackgorunds'.   
  * 
- * Note: in this file will have place all data
- * related with the app
+ * Note: this data with the background will
+ * be use in the style component for the
+ * villas image background
  */
+
+ export const villasBackgorunds = [
+    {
+        id:1,
+        image:villa1    
+    },
+    {
+        id:2,
+        image:villa2    
+    },
+    {
+        id:1,
+        image:villa3    
+    },
+    {
+        id:1,
+        image:villa4    
+    },
+    {
+        id:1,
+        image:villa5    
+    },
+    {
+        id:1,
+        image:villa6    
+    
+    }
+ ]
 
 export const villasData = [
     {
