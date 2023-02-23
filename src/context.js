@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import { BookingDateData, BookingIcons, Images, mainNavLinks, villasData } from "./data";
+import { BookingDateData, BookingIcons, Images, mainNavLinks, villasBackgorunds, villasData } from "./data";
 
-/**vlv-villages version 2.06 - context js -
+/**vlv-villages version 2.08 - context js -
  * Features:
  * 
- *   --> Importing and providing 'villasData'.
+ *   --> Importing and providing 'villasBackgorunds'.
  * 
  * Note: Changes will be done later in this 
  * component
@@ -21,7 +21,8 @@ export const VLVillagesProvider = ({ children }) => {
                 mainNavLinks,
                 BookingIcons,
                 BookingDateData,
-                villasData
+                villasData,
+                villasBackgorunds
             }}>
             {children}
         </VLVillagesContext.Provider>
