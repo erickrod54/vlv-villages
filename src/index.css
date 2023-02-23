@@ -1,10 +1,9 @@
-/**vlv-villages version 2.07 - index.css - Features: 
+/**vlv-villages version 2.08 - index.css - Features: 
  *
- *   --> Finishing to make button 'link' 
- *       styles for 'villa section'. 
+ *   --> Finishing styles for 'villa section'. 
  * 
- * Note: Implementing 'caret selector' to select
- *all the villas divs and apply them styles.
+ * Note: pending to migrate styles to their own component 
+ * and maintain global styles in this file
  */
 
 *,
@@ -413,12 +412,11 @@ section#booking-date{
 /*villas section ---- start - global styles**/
 
 section#villas{
-  background-color: var(--color-primary);
   grid-column: container-start / container-end;
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
-  /*grid-gap: 2rem;**/
+  grid-gap: 2rem;
 
 }
 
@@ -496,6 +494,51 @@ div[class^=villas]:nth-child(2n) a:visited::before{
 div[class^=villas] a:hover::before,
 div[class^=villas] a:active::before{
   height: 400%;
+}
+
+/*background-position: center;
+  background-size: cover;**/
+
+.villas-1{
+  background: linear-gradient(
+    var(--color-primary-light),
+    var(--color-tertiary-light)),
+    url('./assets/Villas/villa-1.jpg');
+}
+
+.villas-2{
+  background: linear-gradient(
+    var(--color-primary-light),
+    var(--color-tertiary-light)),
+    url('./assets/Villas/villa-2.jpg');
+}
+
+.villas-3{
+  background: linear-gradient(
+    var(--color-primary-light),
+    var(--color-tertiary-light)),
+    url('./assets/Villas/villa-3.jpg');
+}
+
+.villas-4{
+  background: linear-gradient(
+    var(--color-primary-light),
+    var(--color-tertiary-light)),
+    url('./assets/Villas/villa-4.jpg');
+}
+
+.villas-5{
+  background: linear-gradient(
+    var(--color-primary-light),
+    var(--color-tertiary-light)),
+    url('./assets/Villas/villa-5.jpg');
+}
+
+.villas-6{
+  background: linear-gradient(
+    var(--color-primary-light),
+    var(--color-tertiary-light)),
+    url('./assets/Villas/villa-6.jpg');
 }
 
 /*villas section ---- end - global styles**/
@@ -607,6 +650,11 @@ section#footer{
     grid-column-gap: 2vw;
     place-items: center;
   }
+
+  /*media query for villas section*/
+  section#villas{
+    grid-gap: 0;
+  }
 }
 
 @media screen and (max-width:600px){
@@ -614,10 +662,23 @@ section#footer{
   .header_logo-content--para{
     font-size: 8rem;
   }
+  
+  /*media query for villas section*/
+    div[class^=villas] p[class^=villas]{
+      margin: 1.5rem 0 4rem 0;
+    }  
+  
 
-  .booking-content_para{
+  .booking-content_para,
+  div[class^=villas] p[class^=villas]{
     font-size: 2.5rem;
   }
+
+  /*change the size of villas section - for small screen - avoid scroll bar*/
+ section#villas{
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  }
+
 }
 
 /*Media queries for the header  -- end**/
