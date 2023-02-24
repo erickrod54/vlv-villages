@@ -1,12 +1,10 @@
-/**vlv-villages version 2.09 - index.css - Features: 
+/**vlv-villages version 2.10 - index.css - Features: 
  *
- *   --> Migrating styles for 'villa section' 
- *       style Component.
- *
- *   --> Keeping only Global Styles 
+ *   --> fixing bug for be on top of 'villas section' 
+ *       by changing 'z-index' in 'header_main-nav'
  * 
- * Note: pending to migrate styles to their own component 
- * and maintain global styles in this
+ * Note: by changing 'z-index' to 6 i make sure that
+ * navigation will be on top of everything. 
  */
 
 *,
@@ -123,8 +121,8 @@ header#header{
   top: 0;
   left: 0;
   /*this will put the navigation on top
-  *of everything**/
-  z-index: 2;
+  *of everything - fixing bug for be on top of villas section**/
+  z-index: 6;
 }
 
 /*styling the checkbox (check the nav)**/
