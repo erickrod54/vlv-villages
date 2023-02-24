@@ -1,13 +1,12 @@
 import React, { useContext } from "react";
-import { BookingDateData, BookingIcons, Images, mainNavLinks, villasBackgorunds, villasData } from "./data";
+import { BookingDateData, BookingIcons, Images, mainNavLinks, MottoData, villasBackgorunds, villasData } from "./data";
 
-/**vlv-villages version 2.08 - context js -
+/**vlv-villages version 2.12 - context js -
  * Features:
  * 
- *   --> Importing and providing 'villasBackgorunds'.
+ *   --> Importing and providing 'MottoData'.
  * 
- * Note: Changes will be done later in this 
- * component
+ * Note: Motto data will be use for Motto Component.
  */
 
 export const VLVillagesContext = React.createContext()
@@ -22,7 +21,8 @@ export const VLVillagesProvider = ({ children }) => {
                 BookingIcons,
                 BookingDateData,
                 villasData,
-                villasBackgorunds
+                villasBackgorunds,
+                MottoData
             }}>
             {children}
         </VLVillagesContext.Provider>
