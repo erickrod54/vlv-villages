@@ -1,7 +1,10 @@
-/**vlv-villages version 2.10 - index.css - Features: 
+/**vlv-villages version 2.11 - index.css - Features: 
  *
- *   --> fixing bug for be on top of 'villas section' 
- *       by changing 'z-index' in 'header_main-nav'
+ *   --> Writting styles for 'motto section'
+ *
+ *   --> Adding also '.motto-content--para' for 
+ *       media query 800px (to rezise text making 
+ *       readable)
  * 
  * Note: by changing 'z-index' to 6 i make sure that
  * navigation will be on top of everything. 
@@ -423,12 +426,43 @@ section#villas{
 
 /*villas section ---- end - global styles**/
 
-/*motto section ----**/
+/*motto section ---- start - global styles **/
 section#motto{
-  background-color: var(--color-secondary);
+  background-color: var(--color-primary);
   grid-column: container-start / container-end;
-  height: 400px;
+  
+  padding: 10vh 3vw;
 }
+
+/*will center all the content*/
+.motto-content{
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.motto-content--title{
+  font-size: var(--font-size-title);
+  padding: 0 2rem 1rem;
+  font-weight: 300;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+/*line below the title**/
+.motto-content--title::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  height: 0.2rem;
+  width: 10%;
+  background-color: white;
+}
+
+/*motto section ---- end - global styles **/
 
 /*events content ----**/
 section#events-content{ 
@@ -548,9 +582,10 @@ section#footer{
       margin: 1.5rem 0 4rem 0;
     }  
   
-
+/*here i add also '.motto-content--para' for media query 800px**/
   .booking-content_para,
-  div[class^=villas] p[class^=villas]{
+  div[class^=villas] p[class^=villas],
+  .motto-content--para{
     font-size: 2.5rem;
   }
 
