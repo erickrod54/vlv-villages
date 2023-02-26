@@ -2,15 +2,17 @@ import { hero, villa1, villa2, villa3, villa4, villa5, villa6 } from "./assets/i
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faClock } from "@fortawesome/free-regular-svg-icons";
 
-/**vlv-villages version 2.12 - data js -
+/**vlv-villages version 2.14 - data js -
  * Features:
  * 
- *   --> Building 'MottoData'.   
+ *   --> Building 'EventsTextTitle'.   
  * 
  * Note: this data with the background will
  * be use in the style component for the
  * villas image background
  */
+
+export const EventsTextTitle = 'Events';
 
 export const MottoData = [
     {
