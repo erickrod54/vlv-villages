@@ -1,13 +1,13 @@
-/**vlv-villages version 2.11 - index.css - Features: 
+/**vlv-villages version 2.13 - index.css - Features: 
  *
- *   --> Writting styles for 'motto section'
+ *   --> Writting styles for 'events section'
  *
- *   --> Adding also '.motto-content--para' for 
- *       media query 800px (to rezise text making 
- *       readable)
+ *   --> Writting 'media query' styles for 
+ *      'events section'
  * 
- * Note: by changing 'z-index' to 6 i make sure that
- * navigation will be on top of everything. 
+ * Note: Pending to miragte the code to it's own
+ * style component and write 'events text' section 
+ * styles. 
  */
 
 *,
@@ -464,19 +464,70 @@ section#motto{
 
 /*motto section ---- end - global styles **/
 
-/*events content ----**/
+/*events content ---- start - global styles**/
 section#events-content{ 
-  background-color: var(--color-tertiary);
   grid-column: container-start / col-end 9;
-  height: 400px;
+  
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+
+section#events-content > div{
+  padding: var(--padding-section);
+  display: grid;
+
+  grid-template-areas:
+   'title'
+   'para';
+   grid-row-gap: 4vh;
+   align-items: center;
+   justify-items: start;
+}
+
+section#events-content > div:first-child{
+  background: linear-gradient(
+   var(--color-tertiary-light),
+   var(--color-tertiary-light)),
+   url('./assets/Events/beach-party.jpg');
+   border-right: solid 0.2rem var(--color-tertiary);
+}
+
+section#events-content > div:last-child{
+  background: linear-gradient(
+   var(--color-tertiary-light),
+   var(--color-tertiary-light)),
+   url('./assets/Events/culture-discovery.jpg');
+   border-left: solid 0.2rem var(--color-tertiary);
+}
+
+section#events-content > div:first-child,
+section#events-content > div:last-child{
+  background-size: cover;
+  background-position: center;
+}
+
+/*here '[class*=title]' selects any element after 'div' with 'title'**/
+section#events-content > div h2[class*=title]{
+  grid-area: title;
+  font-size: var(--font-size-title);
+  font-weight: 400;
+  color: white;
+}
+
+section#events-content > div p[class*=para]{
+  grid-area: para;
+  color: white;
+  font-weight: 500;
 }
 
 /*events content ----**/
 section#events-text{ 
   background-color: var(--color-primary);
   grid-column: col-start 10 / center-end;
-  height: 400px;
+  
 }
+
+/*events content ---- end - global styles**/
 
 /*gallery text ----**/
 section#gallery-text{  
@@ -576,6 +627,21 @@ section#footer{
   .header_logo-content--para{
     font-size: 8rem;
   }
+
+  /*media query for events section*/
+  section#events-content > div:first-child,
+  section#events-content > div:last-child{
+    border: none;
+  }
+
+  section#events-text{
+    display: none;
+  }
+
+  section#events-content{
+    grid-column: center-start / center-end;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  }
   
   /*media query for villas section*/
     div[class^=villas] p[class^=villas]{
@@ -585,7 +651,8 @@ section#footer{
 /*here i add also '.motto-content--para' for media query 800px**/
   .booking-content_para,
   div[class^=villas] p[class^=villas],
-  .motto-content--para{
+  .motto-content--para,
+  section#events-content > div p[class*=para]{
     font-size: 2.5rem;
   }
 
