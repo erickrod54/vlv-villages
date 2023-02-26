@@ -1,13 +1,9 @@
-/**vlv-villages version 2.13 - index.css - Features: 
+/**vlv-villages version 2.14 - index.css - Features: 
  *
- *   --> Writting styles for 'events section'
- *
- *   --> Writting 'media query' styles for 
- *      'events section'
+ *   --> Writting styles for 'events text section'
  * 
  * Note: Pending to miragte the code to it's own
- * style component and write 'events text' section 
- * styles. 
+ * style component. 
  */
 
 *,
@@ -522,9 +518,24 @@ section#events-content > div p[class*=para]{
 
 /*events content ----**/
 section#events-text{ 
-  background-color: var(--color-primary);
+  background-color: var(--color-tertiary);
   grid-column: col-start 10 / center-end;
-  
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  place-items: center;
+}
+
+.events-text-content{
+  transform: rotate(90deg);
+}
+
+.events-text-content--title{
+  font-size: var(--font-size-title);
+  font-weight: 500;
+  color: white;
+  letter-spacing: 0.2rem;
 }
 
 /*events content ---- end - global styles**/
