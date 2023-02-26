@@ -1,23 +1,33 @@
 import React from "react";
+import { useVLVillagesContext } from "../context";
 
-/**vlv-villages version 2.11 - MottoComponent 
+/**vlv-villages version 2.13 - MottoComponent 
  * - Features:
  * 
- *   --> Building 'motto' basic Component.  
+ *   --> Destruturing 'MottoData' from the context.
+ * 
+ *   --> Placing data in the markup.  
  * 
  * Note: Pending to separate the data from the markup.
  */
 
 const MottoComponent = () => {
 
+    const { MottoData } = useVLVillagesContext()
+
+    console.log('testing motto data ==>', MottoData)
+
+    const title = MottoData[0].title
+    const description = MottoData[1].description
+
     return(
         <section id="motto">
             <div className="motto-content">
                 <h2 className="motto-content--title">
-                    We Imagine Luxury
+                    {title}
                 </h2>
                 <p className="motto-content--para">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut consequat semper viverra nam libero justo. Leo vel orci porta non pulvinar neque laoreet suspendisse
+                {description}
                 </p>
             </div>
         </section>
