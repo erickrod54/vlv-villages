@@ -1,6 +1,13 @@
-/**vlv-villages version 2.14 - index.css - Features: 
+/**vlv-villages version 2.16 - index.css - Features: 
  *
- *   --> Writting styles for 'events text section'
+ *   --> Writting styles for 'gallery text section'
+ *
+ *   --> Writting styles for 'features section' 
+ *
+ *  --> Writting styles for 'features text section'
+ *
+ *  --> writting media queries for all of them at
+ *      600px.
  * 
  * Note: Pending to miragte the code to it's own
  * style component. 
@@ -531,7 +538,8 @@ section#events-text{
   transform: rotate(90deg);
 }
 
-.events-text-content--title{
+.events-text-content--title,
+.gallery-text-content--title{
   font-size: var(--font-size-title);
   font-weight: 500;
   color: white;
@@ -540,12 +548,22 @@ section#events-text{
 
 /*events content ---- end - global styles**/
 
-/*gallery text ----**/
+/*gallery text ---- start - global styles**/
 section#gallery-text{  
-  background-color: var(--color-secondary);
+  background-color: var(--color-primary);
   grid-column: center-start / col-end 1;
-  height: 400px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  place-items: center;
 }
+
+.gallery-text-content{
+  transform: rotate(270deg);
+}
+
+/*gallery text ---- end - global styles**/
 
 /*gallery text ----**/
 section#gallery-carousel{  
@@ -639,19 +657,28 @@ section#footer{
     font-size: 8rem;
   }
 
-  /*media query for events section*/
+  /*media query for events and features section for no borders*/
   section#events-content > div:first-child,
-  section#events-content > div:last-child{
+  section#events-content > div:last-child,
+  section#features-content > div:first-child,
+  section#features-content > div:last-child{
     border: none;
   }
 
-  section#events-text{
+  section#events-text,
+  section#gallery-text,
+  section#features-text{
     display: none;
   }
 
   section#events-content{
-    grid-column: center-start / center-end;
     grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  }
+
+  section#gallery-carousel,
+  section#events-content,
+  section#features-content{
+    grid-column: center-start / center-end;
   }
   
   /*media query for villas section*/
@@ -663,7 +690,8 @@ section#footer{
   .booking-content_para,
   div[class^=villas] p[class^=villas],
   .motto-content--para,
-  section#events-content > div p[class*=para]{
+  section#events-content > div p[class*=para],
+  section#features-content > div p[class*=para]{
     font-size: 2.5rem;
   }
 
