@@ -1,16 +1,59 @@
-import { hero, villa1, villa2, villa3, villa4, villa5, villa6 } from "./assets/index.assets";
+import { gallery1, gallery10, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, hero, villa1, villa2, villa3, villa4, villa5, villa6 } from "./assets/index.assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faClock, faCaretSquareLeft, faCaretSquareRight } from "@fortawesome/free-regular-svg-icons";
 
-/**vlv-villages version 2.18 - data js -
+/**vlv-villages version 2.19 - data js -
  * Features:
  * 
- *   --> Building 'galleryCarrouselData'.   
+ *   --> Building 'galleryCarrouselImages'.   
  * 
  * Note: this data with the background will
  * be use in the style component for the
  * villas image background
  */
+
+ export const galleryCarrouselImages = [
+    {
+        id:1,
+        image:gallery1
+    },
+    {
+        id:2,
+        image:gallery2
+    },
+    {
+        id:3,
+        image:gallery3
+    },
+    {
+        id:4,
+        image:gallery4
+    },
+    {
+        id:5,
+        image:gallery5
+    },
+    {
+        id:6,
+        image:gallery6
+    },
+    {
+        id:7,
+        image:gallery7
+    },
+    {
+        id:8,
+        image:gallery8
+    },
+    {
+        id:9,
+        image:gallery9
+    },
+    {
+        id:10,
+        image:gallery10
+    }
+]
 
  export const arrowLeft = <FontAwesomeIcon icon={faCaretSquareLeft} />
  export const arrowRight = <FontAwesomeIcon icon={faCaretSquareRight} />
