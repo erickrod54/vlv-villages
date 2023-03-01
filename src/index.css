@@ -1,13 +1,7 @@
-/**vlv-villages version 2.16 - index.css - Features: 
+/**vlv-villages version 2.20 - index.css - Features: 
  *
- *   --> Writting styles for 'gallery text section'
- *
- *   --> Writting styles for 'features section' 
- *
- *  --> Writting styles for 'features text section'
- *
- *  --> writting media queries for all of them at
- *      600px.
+ *   --> Work in progress writting styles for 
+ *      'gallery carousel'
  * 
  * Note: Pending to miragte the code to it's own
  * style component. 
@@ -565,12 +559,42 @@ section#gallery-text{
 
 /*gallery text ---- end - global styles**/
 
-/*gallery text ----**/
+/*gallery gallery-carousel -- start - global styles**/
 section#gallery-carousel{  
-  background-color: var(--color-tertiary);
   grid-column: col-start 2 / container-end;
-  height: 400px;
+  height: 90vh;
+  overflow: hidden;
+  border: solid 0.2rem var(--color-secondary);
+  position: relative;
 }
+
+/*Image Container*/
+div.gallery-carousel--image-container{
+  background-color: lawngreen;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+/*image container list (UL)**/
+.gallery-carousel--image-container--list{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transition: transform 2s ease-in-out;
+}
+
+/*image container list items**/
+.gallery-carousel--image-container--list--item{
+  /*absolute make the images stock on top of each other*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*gallery gallery-carousel -- end - global styles**/
 
 /*features content ----**/
 section#features-content{ 
