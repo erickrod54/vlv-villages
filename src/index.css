@@ -1,6 +1,6 @@
-/**vlv-villages version 3.00 - index.css - Features: 
+/**vlv-villages version 3.01 - index.css - Features: 
  *
- *   --> Migrating 'Header' styles to it's own
+ *   --> Migrating 'Motto' styles to it's own
  *       Component. 
  * 
  * Note: Pending to miragte the code to it's own
@@ -170,34 +170,6 @@ section#motto{
   grid-column: container-start / container-end;
   
   padding: 10vh 3vw;
-}
-
-/*will center all the content*/
-.motto-content{
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.motto-content--title{
-  font-size: var(--font-size-title);
-  padding: 0 2rem 1rem;
-  font-weight: 300;
-  color: white;
-  text-transform: uppercase;
-  margin-bottom: 4rem;
-  position: relative;
-}
-
-/*line below the title**/
-.motto-content--title::after{
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 45%;
-  height: 0.2rem;
-  width: 10%;
-  background-color: white;
 }
 
 /*motto section ---- end - global styles **/
