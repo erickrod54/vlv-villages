@@ -1,10 +1,9 @@
-/**vlv-villages version 3.01 - index.css - Features: 
+/**vlv-villages version 3.02 - index.css - Features: 
  *
- *   --> Migrating 'Motto' styles to it's own
- *       Component. 
+ *   --> Working in Carousel images and carousel buttons. 
  * 
- * Note: Pending to miragte the code to it's own
- * style component. 
+ * Note: styling to place buttons as a group, not yet
+ *the style for each. 
  */
 
 *,
@@ -306,6 +305,51 @@ div.gallery-carousel--image-container{
   width: 100%;
   height: 100%;
 }
+
+/**Carousel Images*/
+/*this styles take effect to preserve the 'responsiveness' of the 'image'*/
+/*by preserving the aspect ratio**/
+
+.gallery-carousel--image-container--list--item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/**Carousel Buttons*/
+/*this styles place the button exactlly in the center**/
+.gallery-carousel--btn{
+  position: absolute;
+  top: 50%;
+  /*is gonna move half of the image to the top*/
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/*this style place the right button at right**/
+.gallery-carousel--btn--right{
+  right: 0;
+}
+
+.gallery-carousel--nav{
+  background-color: red;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 5%;
+  transform: translateX(-50%);
+  margin-bottom: 1rem;
+
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(10, 1fr);
+  grid-gap: 3rem;
+}
+
 
 /*gallery gallery-carousel -- end - global styles**/
 
