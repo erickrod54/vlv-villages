@@ -1,7 +1,11 @@
-/**vlv-villages version 3.02 - index.css - Features: 
+/**vlv-villages version 3.03 - index.css - Features: 
  *
- *   --> Working in Carousel images and carousel buttons. 
- * 
+ *   --> Working in Carousel buttons style for each. 
+ *      (nav buttons)
+ *
+ *   --> Writting styles for 'nav buttons' the meadia 
+ *       query 600px
+ *
  * Note: styling to place buttons as a group, not yet
  *the style for each. 
  */
@@ -336,7 +340,6 @@ div.gallery-carousel--image-container{
 }
 
 .gallery-carousel--nav{
-  background-color: red;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -350,6 +353,24 @@ div.gallery-carousel--image-container{
   grid-gap: 3rem;
 }
 
+/*Carousel Buttons styles for each - nav buttons**/
+.gallery-carousel-nav--btn{
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: var(--color-secondary);
+  cursor: pointer;
+}
+
+/*Current Button*/
+.current--img{
+  background-color: var(--color-primary);
+}
+
+
+.gallery-carousel--btn{
+  font-size: 3rem;
+}
 
 /*gallery gallery-carousel -- end - global styles**/
 
@@ -479,6 +500,18 @@ section#footer{
   /*change the size of villas section - for small screen - avoid scroll bar*/
  section#villas{
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  }
+
+  .gallery-carousel--btn{
+    font-size: 1.5rem;
+  }
+  
+  .gallery-carousel--nav{
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-row-gap: 5vh;
+    grid-column-gap: 10vw;
+    height: 12%;
   }
 
 }
