@@ -16,7 +16,7 @@ const BookingContent = () => {
     
     const { BookingIcons } = useVLVillagesContext()
 
-    console.log('these are the icons of Booking ==>', BookingIcons)
+    //console.log('these are the icons of Booking ==>', BookingIcons)
 
     const weatherIcon = BookingIcons[0].icon;
     const temperature = BookingIcons[0].temperature;

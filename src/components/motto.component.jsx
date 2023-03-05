@@ -14,7 +14,7 @@ const MottoComponent = () => {
 
     const { MottoData } = useVLVillagesContext()
 
-    console.log('testing motto data ==>', MottoData)
+    //console.log('testing motto data ==>', MottoData)
 
     const title = MottoData[0].title
     const description = MottoData[1].description

@@ -16,7 +16,7 @@ const BookingDate = () => {
     
     const { BookingDateData } = useVLVillagesContext()
     
-    console.log('this is then booking data ==>', BookingDateData)
+    //console.log('this is then booking data ==>', BookingDateData)
     
     /**Arrival data */
     const arrivalTitle = BookingDateData[0].title;
