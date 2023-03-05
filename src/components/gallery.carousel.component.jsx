@@ -1,16 +1,12 @@
 import React, { useEffect } from "react";
 import { useVLVillagesContext } from "../context";
 
-import '../utils';
-
-/**vlv-villages version 3.04 - GalleryCarousel -
+/**vlv-villages version 3.05 - GalleryCarousel -
  * Features:
  * 
- *   --> Building the jsx 'list' with the images
- *       and converting it into an Array.
+ *   --> Getting the 'width' of the images in the Carousel.
  * 
- *   --> Selecting multiple jsx elements from the 
- *       Carousel. 
+ *   --> Fixing error with deleted file 'utils'. 
  * 
  * Note: Motto data will be use for Motto Component.
  */
@@ -52,6 +48,12 @@ const GalleryCarousel = () => {
         /**the dots */
         //console.log(dots)
 
+        /**using 'getBoundingClientRect()' i want to get the width*/
+
+        /**if a leave it like 'getBoundingClientRect()' i'll get way 
+         * more props and i can select the one i need*/
+        const imgWidth = imgs[0].getBoundingClientRect().width;
+        //console.log(imgWidth)
     } 
     
     useEffect(() => {
