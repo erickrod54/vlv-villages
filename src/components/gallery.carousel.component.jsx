@@ -1,11 +1,13 @@
 import React, { useEffect } from "react";
 import { useVLVillagesContext } from "../context";
 
-/**vlv-villages version 3.09 - GalleryCarousel -
+/**vlv-villages version 3.10 - GalleryCarousel -
  * Features:
  * 
- *   --> Building 'updateDots' and connecting them
- *      with the next and previous buttons.       
+ *   --> Aplying more functionality to next and prev
+ *       button.
+ * 
+ *   --> Pending to fix a bug with 'nextButton' .       
  * 
  * Note: Motto data will be use for Motto Component.
  */
@@ -78,42 +80,61 @@ const GalleryCarousel = () => {
         const updateDots = (currentDot, targetDot) => {
            currentDot.classList.remove('current--img');
            targetDot.classList.add('current--img')
-        }    
+        }
+        
+        /**Hide / Show Arrows */
+        const hideShowArrows = (imgs, prevButton, nextButton, targetIndex) => {
+            if (targetIndex === 0) {
+                prevButton.classList.add('hidden');
+                nextButton.classList.remove('hidden');
+            }else if(targetIndex === imgs.length - 1){
+                prevButton.classList.remove('hidden');
+                nextButton.classList.add('hidden');
+            }else{
+                prevButton.classList.remove('hidden');
+                nextButton.classList.remove('hidden');
+            }
+        }
 
         /**Next and Previous image functionality */
-        nextButton.addEventListener('click', (e) => {
-            const currentImg = listGallery.querySelector('.current--img');
-            const currentDot = CarouselNav.querySelector('.current--img');
-            const nextDot = currentDot.nextElementSibling;
-            if (currentImg) {
-                console.log(currentImg);
-            }else{
-                console.log('there is no element with .current--img class');
-            }
-
+        nextButton.addEventListener("click", (e) => {
+            const currentImg = listGallery.querySelector(".current--img");
+            const currentDot = CarouselNav.querySelector(".current--img");
             const nextImg = currentImg.nextElementSibling;
-            
-            moveToImg(listGallery, currentImg, nextImg)
-            
+            const nextDot = currentDot.nextElementSibling;
+          
+            if (currentImg) {
+              console.log(currentImg);
+            } else {
+              console.log("there is no element with .current--img class");
+            }
+          
+            const nextIndex = imgs.findIndex((img) => img === nextImg);
+            moveToImg(listGallery, currentImg, nextImg);
             updateDots(currentDot, nextDot);
-        });
+            hideShowArrows(imgs, prevButton, nextButton, nextIndex);
+          });
 
-        prevButton.addEventListener('click', (e) => {
+          prevButton.addEventListener('click', (e) => {
             const currentImg = listGallery.querySelector('.current--img');
             const currentDot = CarouselNav.querySelector('.current--img');
+          
+            // Get the previous dot
             const prevDot = currentDot.previousElementSibling;
-            if (currentImg) {
-                //console.log(currentImg);
-            }else{
-                //console.log('there is no element with .current--img class');
-            }
-
+          
+            // Get the previous image
             const prevImg = currentImg.previousElementSibling;
-            
-            moveToImg(listGallery, currentImg, prevImg)
-
-            updateDots(currentDot, prevDot);
-        });
+          
+            // Check if there is a previous image
+            if (prevImg) {
+              const prevIndex = imgs.findIndex((img) => img === prevImg);
+              moveToImg(listGallery, currentImg, prevImg);
+              updateDots(currentDot, prevDot);
+              hideShowArrows(imgs, prevButton, nextButton, prevIndex);
+            } else {
+              console.log('There is no previous image.');
+            }
+          });
         
         /**Nav functionality */
         CarouselNav.addEventListener('click', (e) => {
@@ -132,8 +153,8 @@ const GalleryCarousel = () => {
             const targetImg = imgs[targetIndex];
 
             moveToImg(listGallery, currentImg, targetImg);
-
             updateDots(currentDot, targetDot);
+            hideShowArrows(imgs, prevButton, nextButton, targetIndex);
         });
     } 
     
@@ -144,7 +165,7 @@ const GalleryCarousel = () => {
     
     return(
         <section id="gallery-carousel">
-            <button className="gallery-carousel--btn gallery-carousel--btn--left">
+            <button className="gallery-carousel--btn gallery-carousel--btn--left hidden">
                 <i>{arrowLeft}</i>
             </button>
             <div className="gallery-carousel--image-container">
