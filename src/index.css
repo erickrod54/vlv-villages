@@ -1,10 +1,6 @@
-/**vlv-villages version 3.03 - index.css - Features: 
+/**vlv-villages version 3.10 - index.css - Features: 
  *
- *   --> Working in Carousel buttons style for each. 
- *      (nav buttons)
- *
- *   --> Writting styles for 'nav buttons' the meadia 
- *       query 600px
+ *   --> Writting 'hidden' class style.
  *
  * Note: styling to place buttons as a group, not yet
  *the style for each. 
@@ -370,6 +366,11 @@ div.gallery-carousel--image-container{
 
 .gallery-carousel--btn{
   font-size: 3rem;
+}
+
+/*to hide the arrows**/
+.hidden{
+  display: none;
 }
 
 /*gallery gallery-carousel -- end - global styles**/
