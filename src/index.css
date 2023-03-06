@@ -1,9 +1,9 @@
-/**vlv-villages version 3.12 - index.css - Features: 
+/**vlv-villages version 3.13 - index.css - Features: 
  *
- *   --> Writting styles for 'FeaturesContent'.
+ *   --> Writting styles for 'FeaturesText'.
  *
- * Note: pending to add media queries for 
- 'FeaturesContent'. 
+ * Note: 'FeaturesText' share styles with
+ * 'EventsText'. 
  */
 
 *,
@@ -235,7 +235,8 @@ section#features-content > div p[class*=para]{
 }
 
 /*events content ----**/
-section#events-text{ 
+section#events-text,
+section#features-text{ 
   background-color: var(--color-tertiary);
   grid-column: col-start 10 / center-end;
 
@@ -245,12 +246,14 @@ section#events-text{
   place-items: center;
 }
 
-.events-text-content{
+.events-text-content,
+.features-text-content{
   transform: rotate(90deg);
 }
 
 .events-text-content--title,
-.gallery-text-content--title{
+.gallery-text-content--title,
+.features-text-content--title{
   font-size: var(--font-size-title);
   font-weight: 500;
   color: white;
@@ -523,7 +526,8 @@ section#footer{
   }
 
   /*change the size of villas section - for small screen - avoid scroll bar*/
- section#villas{
+ section#villas,
+ section#features-content{
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   }
 
