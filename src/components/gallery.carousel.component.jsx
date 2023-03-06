@@ -1,12 +1,14 @@
 import React, { useEffect } from "react";
 import { useVLVillagesContext } from "../context";
 
-/**vlv-villages version 3.05 - GalleryCarousel -
+/**vlv-villages version 3.06 - GalleryCarousel -
  * Features:
  * 
- *   --> Getting the 'width' of the images in the Carousel.
+ *   --> Still working in the javaScript 
+ *      implementation.
  * 
- *   --> Fixing error with deleted file 'utils'. 
+ *   --> Rearranging 'images' to move them
+ *      with 'nextButton'     
  * 
  * Note: Motto data will be use for Motto Component.
  */
@@ -54,6 +56,43 @@ const GalleryCarousel = () => {
          * more props and i can select the one i need*/
         const imgWidth = imgs[0].getBoundingClientRect().width;
         //console.log(imgWidth)
+
+        /**Arranging images next to one another */
+        
+        /**old syntax
+         * function setImgPosition(img, index){
+            img.style.left = imgWidth * index + 'px'
+        } */
+
+        const setImgPosition = (img, index) => {
+            img.style.left = imgWidth * index + 'px';
+        }
+        
+        imgs.forEach(setImgPosition)
+
+        nextButton.addEventListener('click', (e) => {
+            const currentImg = listGallery.querySelector('.current--img')
+            if (currentImg) {
+                console.log(currentImg);
+            }else{
+                console.log('there is no element with .current--img class');
+            }
+
+            const nextImg = currentImg.nextElementSibling;
+            //console.log(nextImg)
+
+            const distToMove = nextImg.style.left; 
+            console.log(distToMove)
+
+            listGallery.style.transform = 'translateX(-' + distToMove + ')'
+
+            /**Removing and adding the current--img class -
+             * notice the point in the class ins not written*/
+            /**this way */
+            
+            currentImg.classList.remove('current--img')
+            nextImg.classList.add('current--img')
+        });
     } 
     
     useEffect(() => {
@@ -72,7 +111,7 @@ const GalleryCarousel = () => {
                         const { id, image } = picture;
 
                         return(
-                            <li key={id} className="gallery-carousel--image-container--list--item">
+                            <li key={id} className="gallery-carousel--image-container--list--item current--img">
                                 <img src={image} alt='villa'/>
                             </li>
                         )
