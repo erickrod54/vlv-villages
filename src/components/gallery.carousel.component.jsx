@@ -1,15 +1,18 @@
 import React, { useEffect } from "react";
 import { useVLVillagesContext } from "../context";
 
-/**vlv-villages version 3.10 - GalleryCarousel -
+/**vlv-villages version 3.11 - GalleryCarousel -
  * Features:
  * 
- *   --> Aplying more functionality to next and prev
- *       button.
+ *   --> Fixing a bug with 'nextButton' .       
  * 
- *   --> Pending to fix a bug with 'nextButton' .       
+ * Note: the error is fixed by adding:
  * 
- * Note: Motto data will be use for Motto Component.
+ *      || imgs[0];
+ *      || dots[0]
+ * 
+ * to reset to the first image in case for
+ * and 'index' higher than the last
  */
 
 const GalleryCarousel = () => {
@@ -100,8 +103,8 @@ const GalleryCarousel = () => {
         nextButton.addEventListener("click", (e) => {
             const currentImg = listGallery.querySelector(".current--img");
             const currentDot = CarouselNav.querySelector(".current--img");
-            const nextImg = currentImg.nextElementSibling;
-            const nextDot = currentDot.nextElementSibling;
+            const nextImg = currentImg.nextElementSibling || imgs[0];
+            const nextDot = currentDot.nextElementSibling || dots[0];
           
             if (currentImg) {
               console.log(currentImg);
