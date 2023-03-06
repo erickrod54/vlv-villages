@@ -1,9 +1,9 @@
 import React from "react";
 
-/**vlv-villages version 1.04 - FeaturesContent -
+/**vlv-villages version 3.13 - FeaturesText -
  * Features:
  * 
- *   --> Changin className by id.
+ *   --> Building Markup for 'FeaturesText'.
  * 
  * Note: Changes will be done later in this 
  * component
@@ -12,8 +12,12 @@ import React from "react";
 const FeaturesText = () => {
 
     return(
-        <section id="features-text"> 
-            Features Text
+        <section id="features-text">
+            <div className="features-text-content">
+                <h2 className="features-text-content--title">
+                  Features  
+                </h2>
+            </div>
         </section>
     )
 }
