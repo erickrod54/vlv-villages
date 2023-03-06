@@ -2,15 +2,17 @@ import { gallery1, gallery10, gallery2, gallery3, gallery4, gallery5, gallery6, 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faClock, faCaretSquareLeft, faCaretSquareRight } from "@fortawesome/free-regular-svg-icons";
 
-/**vlv-villages version 2.19 - data js -
+/**vlv-villages version 3.14 - data js -
  * Features:
  * 
- *   --> Building 'galleryCarrouselImages'.   
+ *   --> Building 'FeaturesTextTitle'.   
  * 
  * Note: this data with the background will
  * be use in the style component for the
  * villas image background
  */
+
+ export const FeaturesTextTitle = 'Features';
 
  export const galleryCarrouselImages = [
     {
