@@ -1,13 +1,11 @@
 import React, { useEffect } from "react";
 import { useVLVillagesContext } from "../context";
 
-/**vlv-villages version 3.07 - GalleryCarousel -
+/**vlv-villages version 3.08 - GalleryCarousel -
  * Features:
  * 
- *   --> Implementing a hook for 'images' to move them
- *      with 'nextButton' and 'prevtButton'.
- * 
- *   --> Starting to target the 'dots'.       
+ *   --> Matching indexes with 'gallery-carousel--nav'
+ *      to update images as has been clicked.       
  * 
  * Note: Motto data will be use for Motto Component.
  */
@@ -110,7 +108,19 @@ const GalleryCarousel = () => {
         CarouselNav.addEventListener('click', (e) => {
             /**console.log(targetDot.target) */
             const targetDot = e.target.closest('button');
-            console.log(targetDot)
+            //console.log(targetDot)
+
+            //console.log('Function Stops');
+            if(!targetDot) return;
+            //console.log('Function Continues');
+            
+            const currentImg = listGallery.querySelector('.current--img');
+            const currentDot = CarouselNav.querySelector('.current--img');
+            /**targetDot because is the index of the button with them img */
+            const targetIndex = dots.findIndex((dot) => dot === targetDot);
+            const targetImg = imgs[targetIndex];
+
+            moveToImg(listGallery, currentImg, targetImg)
         });
     } 
     
@@ -142,10 +152,10 @@ const GalleryCarousel = () => {
             </button>
             <div className="gallery-carousel--nav">
                 <button className="gallery-carousel-nav--btn current--img"></button>
-                <button className="gallery-carousel-nav--btn">12</button>
-                <button className="gallery-carousel-nav--btn">13</button>
-                <button className="gallery-carousel-nav--btn">14</button>
-                <button className="gallery-carousel-nav--btn">15</button>
+                <button className="gallery-carousel-nav--btn"></button>
+                <button className="gallery-carousel-nav--btn"></button>
+                <button className="gallery-carousel-nav--btn"></button>
+                <button className="gallery-carousel-nav--btn"></button>
                 <button className="gallery-carousel-nav--btn"></button>
                 <button className="gallery-carousel-nav--btn"></button>
                 <button className="gallery-carousel-nav--btn"></button>
