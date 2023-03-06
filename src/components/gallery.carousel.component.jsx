@@ -1,14 +1,13 @@
 import React, { useEffect } from "react";
 import { useVLVillagesContext } from "../context";
 
-/**vlv-villages version 3.06 - GalleryCarousel -
+/**vlv-villages version 3.07 - GalleryCarousel -
  * Features:
  * 
- *   --> Still working in the javaScript 
- *      implementation.
+ *   --> Implementing a hook for 'images' to move them
+ *      with 'nextButton' and 'prevtButton'.
  * 
- *   --> Rearranging 'images' to move them
- *      with 'nextButton'     
+ *   --> Starting to target the 'dots'.       
  * 
  * Note: Motto data will be use for Motto Component.
  */
@@ -68,8 +67,16 @@ const GalleryCarousel = () => {
             img.style.left = imgWidth * index + 'px';
         }
         
-        imgs.forEach(setImgPosition)
+        imgs.forEach(setImgPosition);
 
+        /**Moving images next to one another */
+        const moveToImg = (listGallery, currentImg, targetImg) => {
+            listGallery.style.transform = 'translateX(-' + targetImg.style.left + ')';
+            currentImg.classList.remove('current--img');
+            targetImg.classList.add('current--img');
+        }
+
+        /**Next and Previous image functionality */
         nextButton.addEventListener('click', (e) => {
             const currentImg = listGallery.querySelector('.current--img')
             if (currentImg) {
@@ -79,19 +86,31 @@ const GalleryCarousel = () => {
             }
 
             const nextImg = currentImg.nextElementSibling;
-            //console.log(nextImg)
-
-            const distToMove = nextImg.style.left; 
-            console.log(distToMove)
-
-            listGallery.style.transform = 'translateX(-' + distToMove + ')'
-
-            /**Removing and adding the current--img class -
-             * notice the point in the class ins not written*/
-            /**this way */
             
-            currentImg.classList.remove('current--img')
-            nextImg.classList.add('current--img')
+            moveToImg(listGallery, currentImg, nextImg)
+            
+        });
+
+        prevButton.addEventListener('click', (e) => {
+            const currentImg = listGallery.querySelector('.current--img')
+            if (currentImg) {
+                //console.log(currentImg);
+            }else{
+                //console.log('there is no element with .current--img class');
+            }
+
+            const prevImg = currentImg.previousElementSibling;
+            
+            moveToImg(listGallery, currentImg, prevImg)
+
+            
+        });
+        
+        /**Nav functionality */
+        CarouselNav.addEventListener('click', (e) => {
+            /**console.log(targetDot.target) */
+            const targetDot = e.target.closest('button');
+            console.log(targetDot)
         });
     } 
     
