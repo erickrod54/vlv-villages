@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { useVLVillagesContext } from "../context";
 
-/**vlv-villages version 3.08 - GalleryCarousel -
+/**vlv-villages version 3.09 - GalleryCarousel -
  * Features:
  * 
- *   --> Matching indexes with 'gallery-carousel--nav'
- *      to update images as has been clicked.       
+ *   --> Building 'updateDots' and connecting them
+ *      with the next and previous buttons.       
  * 
  * Note: Motto data will be use for Motto Component.
  */
@@ -74,9 +74,17 @@ const GalleryCarousel = () => {
             targetImg.classList.add('current--img');
         }
 
+        /**updating the background color for the dot been selected */
+        const updateDots = (currentDot, targetDot) => {
+           currentDot.classList.remove('current--img');
+           targetDot.classList.add('current--img')
+        }    
+
         /**Next and Previous image functionality */
         nextButton.addEventListener('click', (e) => {
-            const currentImg = listGallery.querySelector('.current--img')
+            const currentImg = listGallery.querySelector('.current--img');
+            const currentDot = CarouselNav.querySelector('.current--img');
+            const nextDot = currentDot.nextElementSibling;
             if (currentImg) {
                 console.log(currentImg);
             }else{
@@ -87,10 +95,13 @@ const GalleryCarousel = () => {
             
             moveToImg(listGallery, currentImg, nextImg)
             
+            updateDots(currentDot, nextDot);
         });
 
         prevButton.addEventListener('click', (e) => {
-            const currentImg = listGallery.querySelector('.current--img')
+            const currentImg = listGallery.querySelector('.current--img');
+            const currentDot = CarouselNav.querySelector('.current--img');
+            const prevDot = currentDot.previousElementSibling;
             if (currentImg) {
                 //console.log(currentImg);
             }else{
@@ -101,7 +112,7 @@ const GalleryCarousel = () => {
             
             moveToImg(listGallery, currentImg, prevImg)
 
-            
+            updateDots(currentDot, prevDot);
         });
         
         /**Nav functionality */
@@ -120,7 +131,9 @@ const GalleryCarousel = () => {
             const targetIndex = dots.findIndex((dot) => dot === targetDot);
             const targetImg = imgs[targetIndex];
 
-            moveToImg(listGallery, currentImg, targetImg)
+            moveToImg(listGallery, currentImg, targetImg);
+
+            updateDots(currentDot, targetDot);
         });
     } 
     
