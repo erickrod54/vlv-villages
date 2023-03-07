@@ -1,6 +1,9 @@
-/**vlv-villages version 3.13 - index.css - Features: 
+/**vlv-villages version 3.15 - index.css - Features: 
  *
  *   --> Writting styles for 'FeaturesText'.
+ *
+ *   --> Work in progress, writting testimonials
+ *       styles. 
  *
  * Note: 'FeaturesText' share styles with
  * 'EventsText'. 
@@ -416,12 +419,63 @@ section#features-text{
 
 /*features content -- end - global styles**/
 
-/*testimonials ----**/
+/*testimonials ---- start - global styles****/
 section#testimonials{ 
-  background-color: var(--color-tertiary);
   grid-column: center-start / center-end;
-  height: 400px;
+  padding: var(--padding-section);
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 28rem);
+  grid-gap: 5rem;
+  place-content: center;
 }
+
+.testimonials-card{
+  width: 28rem;
+  height: 50rem;
+  position: relative;
+}
+
+.testimonials-card--front,
+.testimonials-card--back{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 2s ease-in-out;
+  /*backface-visibility: hidden;*/
+  /*transform: perspective(100rem);**/
+
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  padding: 3rem;
+}
+
+.testimonials-card--front h2{
+  background-color: var(--color-secondary-light);
+  padding: 1rem;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.testimonials-card--back p{
+  place-self: center;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.testimonials-card:first-child .testimonials-card--front{
+  background-image: url('./assets/Testimonials/testimonials-1.jpg');
+ 
+}
+
+/*testimonials ---- end - global styles****/
 
 /*footer ----**/
 section#footer{ 
