@@ -1,9 +1,11 @@
 import React from "react";
+import { useVLVillagesContext } from "../context";
 
-/**vlv-villages version 3.13 - FeaturesText -
+/**vlv-villages version 3.15 - FeaturesText -
  * Features:
  * 
- *   --> Building Markup for 'FeaturesText'.
+ *   --> Destrcuturing 'FeaturesTextTitle' from
+ *       the context.
  * 
  * Note: Changes will be done later in this 
  * component
@@ -11,11 +13,13 @@ import React from "react";
 
 const FeaturesText = () => {
 
+    const { FeaturesTextTitle } = useVLVillagesContext()
+
     return(
         <section id="features-text">
             <div className="features-text-content">
                 <h2 className="features-text-content--title">
-                  Features  
+                    {FeaturesTextTitle}
                 </h2>
             </div>
         </section>
