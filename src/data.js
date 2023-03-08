@@ -2,15 +2,47 @@ import { gallery1, gallery10, gallery2, gallery3, gallery4, gallery5, gallery6, 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faClock, faCaretSquareLeft, faCaretSquareRight } from "@fortawesome/free-regular-svg-icons";
 
-/**vlv-villages version 3.14 - data js -
+/**vlv-villages version 3.17 - data js -
  * Features:
  * 
- *   --> Building 'FeaturesTextTitle'.   
+ *   --> Building 'testimonialsData'.   
  * 
- * Note: this data with the background will
- * be use in the style component for the
- * villas image background
+ * Note: this data will be rendered in all
+ * the cards.
  */
+
+ export const testimonialsData = [
+    {
+        id:1,
+        title:'clark lois',
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    },
+    {
+        id:2,
+        title:'tony stark',
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    },
+    {
+        id:3,
+        title:'hope pym',
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    },
+    {
+        id:4,
+        title:'amanda waller',
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    },
+    {
+        id:5,
+        title:'steve rogers',
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    },
+    {
+        id:6,
+        title:'black widow',
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    }
+]
 
  export const FeaturesTextTitle = 'Features';
 
