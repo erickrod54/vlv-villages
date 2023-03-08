@@ -1,12 +1,41 @@
-/**vlv-villages version 3.15 - index.css - Features: 
+/**vlv-villages version 3.16 - index.css - Features: 
  *
- *   --> Writting styles for 'FeaturesText'.
+ *   --> Writting testimonials
+ *       styles.
  *
- *   --> Work in progress, writting testimonials
- *       styles. 
+ *   --> Finishing styles for one card    
  *
- * Note: 'FeaturesText' share styles with
- * 'EventsText'. 
+ * Note: for the 3D card styles the following
+ * props are related:
+ *
+ *    .testimonials-card--front,
+ *    .testimonials-card--back{
+ *
+ *          backface-visibility: hidden;
+ *          transform: perspective(100rem);
+ *
+ * and: 
+ *    
+ *  .testimonials-card--back {
+ *    
+ *    this prop using 'rotateY'  is related with 'backface-visibility: hidden;'
+ *    the 'perspective(100rem)' with hover will make the 3d effect
+ * 
+ *    transform: perspective(100rem) rotateY(0.5turn);
+ *    background-color: var(--color-secondary); 
+ *  }   
+ *
+ *  the 'perspective(100rem)' with hover will make the 3d effect - 0.5turn = 180deg
+ *  
+ *  .testimonials-card:hover .testimonials-card--front{
+ *    transform: perspective(100rem) rotateY(0.5turn);
+ *  }
+ *  
+ *   the 'perspective(100rem)' with hover will make the 3d effect
+ *  .testimonials-card:hover .testimonials-card--back{
+ *    transform: perspective(100rem) rotateY(1turn);
+ *  }
+ *. 
  */
 
 *,
@@ -448,8 +477,8 @@ section#testimonials{
   width: 100%;
   height: 100%;
   transition: all 2s ease-in-out;
-  /*backface-visibility: hidden;*/
-  /*transform: perspective(100rem);**/
+  backface-visibility: hidden;
+  transform: perspective(100rem);
 
   display: grid;
   justify-items: center;
@@ -473,6 +502,23 @@ section#testimonials{
 .testimonials-card:first-child .testimonials-card--front{
   background-image: url('./assets/Testimonials/testimonials-1.jpg');
  
+}
+
+.testimonials-card--back {
+  /*this prop using 'rotateY'  is related with 'backface-visibility: hidden;'*/
+  /*the 'perspective(100rem)' with hover will make the 3d effect**/
+  transform: perspective(100rem) rotateY(0.5turn);
+  background-color: var(--color-secondary); 
+}
+
+/*the 'perspective(100rem)' with hover will make the 3d effect - 0.5turn = 180deg**/
+.testimonials-card:hover .testimonials-card--front{
+  transform: perspective(100rem) rotateY(0.5turn);
+}
+
+/*the 'perspective(100rem)' with hover will make the 3d effect**/
+.testimonials-card:hover .testimonials-card--back{
+  transform: perspective(100rem) rotateY(1turn);
 }
 
 /*testimonials ---- end - global styles****/
