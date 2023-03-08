@@ -8,7 +8,7 @@ import { faSun, faClock, faCaretSquareLeft, faCaretSquareRight } from "@fortawes
  *   --> Building 'testimonialBackgrounds'.   
  * 
  * Note: this data will be rendered in all
- * the cards.
+ * the cards and will be passed to testimonials.
  */
 
  export const testimonialBackgrounds = [
