@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import { BookingDateData, BookingIcons, EventsTextTitle, FeaturesTextTitle, galleryCarrouselData, galleryCarrouselImages, GalleryTextTitle, Images, mainNavLinks, MottoData, villasBackgorunds, villasData } from "./data";
+import { BookingDateData, BookingIcons, EventsTextTitle, FeaturesTextTitle, galleryCarrouselData, galleryCarrouselImages, GalleryTextTitle, Images, mainNavLinks, MottoData, testimonialsData, villasBackgorunds, villasData } from "./data";
 
-/**vlv-villages version 3.15 - context js -
+/**vlv-villages version 3.17 - context js -
  * Features:
  * 
- *   --> Importing and providing 'FeaturesTextTitle'.
+ *   --> Importing and providing 'testimonialsData'.
  * 
  * Note: Motto data will be use for Motto Component.
  */
@@ -27,6 +27,7 @@ export const VLVillagesProvider = ({ children }) => {
                 GalleryTextTitle,
                 FeaturesTextTitle,
                 galleryCarrouselData,
+                testimonialsData,
                 galleryCarrouselImages
             }}>
             {children}
