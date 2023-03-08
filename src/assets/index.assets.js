@@ -15,15 +15,43 @@ import gallery7 from './Gallery/gallery-7.jpg';
 import gallery8 from './Gallery/gallery-8.jpg';
 import gallery9 from './Gallery/gallery-9.jpg';
 import gallery10 from './Gallery/gallery-10.jpg';
+import testimonial1 from './Testimonials/testimonials-1.jpg'
+import testimonial2 from './Testimonials/testimonials-2.jpg'
+import testimonial3 from './Testimonials/testimonials-3.jpg'
+import testimonial4 from './Testimonials/testimonials-4.jpg'
+import testimonial5 from './Testimonials/testimonials-5.jpg'
+import testimonial6 from './Testimonials/testimonials-6.jpg'
 
-/**vlv-villages version 2.18 - index.assets -
+/**vlv-villages version 3.18 - index.assets -
  * Features:
  * 
- *   --> Importing and exporting 10 'gallery' assets
- *       for 'gallery-carrouosel' section.
+ *   --> Importing and exporting 6 'testimonial' assets
+ *       for backgrounds.
  * 
  * Note: Changes will be done later in this 
  * component
  */
 
-export { hero, villa1, villa2, villa3, villa4, villa5, villa6, gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, gallery10 }
+export { hero,
+       villa1,
+       villa2,
+       villa3,
+       villa4,
+       villa5,
+       villa6,
+       gallery1,
+       gallery2,
+       gallery3,
+       gallery4,
+       gallery5,
+       gallery6,
+       gallery7,
+       gallery8,
+       gallery9,
+       gallery10,
+       testimonial1,
+       testimonial2,
+       testimonial3,
+       testimonial4,
+       testimonial5,
+       testimonial6 }

@@ -1,15 +1,48 @@
-import { gallery1, gallery10, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, hero, villa1, villa2, villa3, villa4, villa5, villa6 } from "./assets/index.assets";
+import { gallery1, gallery10, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, hero, testimonial1, testimonial2, testimonial3, testimonial4, testimonial5, testimonial6, villa1, villa2, villa3, villa4, villa5, villa6 } from "./assets/index.assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faClock, faCaretSquareLeft, faCaretSquareRight } from "@fortawesome/free-regular-svg-icons";
 
-/**vlv-villages version 3.17 - data js -
+/**vlv-villages version 3.18 - data js -
  * Features:
  * 
- *   --> Building 'testimonialsData'.   
+ *   --> Building 'testimonialBackgrounds'.   
  * 
  * Note: this data will be rendered in all
  * the cards.
  */
+
+ export const testimonialBackgrounds = [
+    {
+        id:1,
+        title:'clark lois',
+        imagesbkg: testimonial1
+    },
+    {
+        id:2,
+        title:'tony stark',
+        imagesbkg: testimonial2
+    },
+    {
+        id:3,
+        title:'hope pym',
+        imagesbkg: testimonial3
+    },
+    {
+        id:4,
+        title:'amanda waller',
+        imagesbkg: testimonial4
+    },
+    {
+        id:5,
+        title:'steve rogers',
+        imagesbkg: testimonial5
+    },
+    {
+        id:6,
+        title:'black widow',
+        imagesbkg: testimonial6
+    }
+]
 
  export const testimonialsData = [
     {
