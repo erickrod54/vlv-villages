@@ -1,15 +1,48 @@
 import { gallery1, gallery10, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, hero, testimonial1, testimonial2, testimonial3, testimonial4, testimonial5, testimonial6, villa1, villa2, villa3, villa4, villa5, villa6 } from "./assets/index.assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faClock, faCaretSquareLeft, faCaretSquareRight } from "@fortawesome/free-regular-svg-icons";
+import { faFacebook, faInstagram, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
-/**vlv-villages version 3.18 - data js -
+/**vlv-villages version 3.19 - data js -
  * Features:
  * 
- *   --> Building 'testimonialBackgrounds'.   
+ *   --> Building 'footerBrandIcons'.  
  * 
- * Note: this data will be rendered in all
- * the cards and will be passed to testimonials.
+ * Note: the brand icons has been installed
+ * this way:
+ * 
+ * yarn add '@fortawesome/free-brands-svg-icons'
+ * 
+ * .
  */
+
+ export const facebook = <FontAwesomeIcon icon={faFacebook} />
+ export const instagram = <FontAwesomeIcon icon={faInstagram} />
+ export const twitter = <FontAwesomeIcon icon={faTwitter} />
+ export const linkedin = <FontAwesomeIcon icon={faLinkedinIn} />
+
+ export const footerBrandIcons = [
+    {
+        id:1,
+        title:'facebook',
+        imagesbkg: facebook
+    },
+    {
+        id:2,
+        title:'instagram',
+        imagesbkg: instagram
+    },
+    {
+        id:3,
+        title:'twitter',
+        imagesbkg: twitter
+    },
+    {
+        id:4,
+        title:'linkedin',
+        imagesbkg: linkedin
+    },
+]
 
  export const testimonialBackgrounds = [
     {
