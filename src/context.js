@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import { BookingDateData, BookingIcons, EventsTextTitle, FeaturesTextTitle, galleryCarrouselData, galleryCarrouselImages, GalleryTextTitle, Images, mainNavLinks, MottoData, testimonialsData, villasBackgorunds, villasData } from "./data";
+import { BookingDateData, BookingIcons, EventsTextTitle, FeaturesTextTitle, galleryCarrouselData, galleryCarrouselImages, GalleryTextTitle, Images, mainNavLinks, MottoData, testimonialBackgrounds, testimonialsData, villasBackgorunds, villasData } from "./data";
 
-/**vlv-villages version 3.17 - context js -
+/**vlv-villages version 3.19 - context js -
  * Features:
  * 
  *   --> Importing and providing 'testimonialsData'.
@@ -28,7 +28,8 @@ export const VLVillagesProvider = ({ children }) => {
                 FeaturesTextTitle,
                 galleryCarrouselData,
                 testimonialsData,
-                galleryCarrouselImages
+                galleryCarrouselImages,
+                testimonialBackgrounds
             }}>
             {children}
         </VLVillagesContext.Provider>
