@@ -1,14 +1,13 @@
 import React from "react";
 import { useVLVillagesContext } from "../context";
 
-/**vlv-villages version 3.17 - Testimonials -
+/**vlv-villages version 3.19 - Testimonials -
  * Features:
  * 
- *   --> Destructuiring 'testimonialsData' 
+ *   --> Destructuiring 'testimonialBackgrounds' 
  *       from the context.
  * 
- *   --> Placing Dyinamicly 'testimonialsData' 
- *       in the Markup.   
+ *   --> Testing data.
  * 
  * Note: Pending to bring the styles, make the markup
  * and set backgrounds
@@ -17,8 +16,8 @@ import { useVLVillagesContext } from "../context";
 
 const Testimonials = () => {
 
-    const { testimonialsData } = useVLVillagesContext();
-    //console.log('this is the cards data =>', testimonialsData)
+    const { testimonialsData, testimonialBackgrounds } = useVLVillagesContext();
+    console.log('this is the testimonialBackgrounds cards data =>', testimonialBackgrounds)
     
     return(
         <section id="testimonials">
