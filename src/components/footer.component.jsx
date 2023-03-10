@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import { useVLVillagesContext } from "../context";
 
-/**vlv-villages version 3.19 - FooterComponent -
+/**vlv-villages version 3.20 - FooterComponent -
  * Features:
  * 
  *   --> Building the Markup for 'FooterComponent'.
@@ -11,6 +12,9 @@ import { Link } from 'react-router-dom';
  */
 
 const FooterComponent = () => {
+
+    const { footerBrandIcons } = useVLVillagesContext()
+    console.log('this is the data for footerBrandIcons ==>',footerBrandIcons)
 
     return(
         <section id="footer">
