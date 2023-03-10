@@ -1,41 +1,12 @@
-/**vlv-villages version 3.16 - index.css - Features: 
+/**vlv-villages version 3.20 - index.css - Features: 
  *
- *   --> Writting testimonials
- *       styles.
+ *   --> Migrating styles for 'Testimonials' own
+ *      style Component (Card styles)
  *
- *   --> Finishing styles for one card    
+ *   --> Keeping Global Styles for Testimonials.      
  *
- * Note: for the 3D card styles the following
- * props are related:
- *
- *    .testimonials-card--front,
- *    .testimonials-card--back{
- *
- *          backface-visibility: hidden;
- *          transform: perspective(100rem);
- *
- * and: 
- *    
- *  .testimonials-card--back {
- *    
- *    this prop using 'rotateY'  is related with 'backface-visibility: hidden;'
- *    the 'perspective(100rem)' with hover will make the 3d effect
- * 
- *    transform: perspective(100rem) rotateY(0.5turn);
- *    background-color: var(--color-secondary); 
- *  }   
- *
- *  the 'perspective(100rem)' with hover will make the 3d effect - 0.5turn = 180deg
- *  
- *  .testimonials-card:hover .testimonials-card--front{
- *    transform: perspective(100rem) rotateY(0.5turn);
- *  }
- *  
- *   the 'perspective(100rem)' with hover will make the 3d effect
- *  .testimonials-card:hover .testimonials-card--back{
- *    transform: perspective(100rem) rotateY(1turn);
- *  }
- *. 
+ * Note: Changes for this file are gonna applied
+ *later 
  */
 
 *,
@@ -457,68 +428,6 @@ section#testimonials{
   grid-template-columns: repeat(auto-fit, 28rem);
   grid-gap: 5rem;
   place-content: center;
-}
-
-.testimonials-card{
-  width: 28rem;
-  height: 50rem;
-  position: relative;
-}
-
-.testimonials-card--front,
-.testimonials-card--back{
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: all 2s ease-in-out;
-  backface-visibility: hidden;
-  transform: perspective(100rem);
-
-  display: grid;
-  justify-items: center;
-  align-items: start;
-  padding: 3rem;
-}
-
-.testimonials-card--front h2{
-  background-color: var(--color-secondary-light);
-  padding: 1rem;
-  border-bottom-right-radius: 50%;
-  border-bottom-left-radius: 50%;
-}
-
-.testimonials-card--back p{
-  place-self: center;
-  font-size: 2rem;
-  font-weight: 400;
-}
-
-.testimonials-card:first-child .testimonials-card--front{
-  background-image: url('./assets/Testimonials/testimonials-1.jpg');
- 
-}
-
-.testimonials-card--back {
-  /*this prop using 'rotateY'  is related with 'backface-visibility: hidden;'*/
-  /*the 'perspective(100rem)' with hover will make the 3d effect**/
-  transform: perspective(100rem) rotateY(0.5turn);
-  background-color: var(--color-secondary); 
-}
-
-/*the 'perspective(100rem)' with hover will make the 3d effect - 0.5turn = 180deg**/
-.testimonials-card:hover .testimonials-card--front{
-  transform: perspective(100rem) rotateY(0.5turn);
-}
-
-/*the 'perspective(100rem)' with hover will make the 3d effect**/
-.testimonials-card:hover .testimonials-card--back{
-  transform: perspective(100rem) rotateY(1turn);
 }
 
 /*testimonials ---- end - global styles****/
