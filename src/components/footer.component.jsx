@@ -2,13 +2,13 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import { useVLVillagesContext } from "../context";
 
-/**vlv-villages version 3.20 - FooterComponent -
+/**vlv-villages version 4.00 - FooterComponent -
  * Features:
  * 
- *   --> Building the Markup for 'FooterComponent'.
+ *   --> Destructuring 'footerBrandIcons' and 
+ *       placing icons.
  * 
- * Note: Changes will be done later in this 
- * component
+ * Note: pending to change the name of the data icons
  */
 
 const FooterComponent = () => {
@@ -16,21 +16,26 @@ const FooterComponent = () => {
     const { footerBrandIcons } = useVLVillagesContext()
     console.log('this is the data for footerBrandIcons ==>',footerBrandIcons)
 
+    const facebook  = footerBrandIcons[0].imagesbkg
+    const instagram = footerBrandIcons[1].imagesbkg
+    const twitter   = footerBrandIcons[2].imagesbkg
+    const linkedin  = footerBrandIcons[3].imagesbkg
+
     return(
         <section id="footer">
             <p>All Rights Reserved. &copy; VLV</p>
             <div className="footer-social">
                 <Link to='#' className="footer-social--link">
-                    facebook
+                    <i>{facebook}</i>
                 </Link>
                 <Link to='#' className="footer-social--link">
-                    instagram   
+                    <i>{instagram}</i> 
                 </Link>
                 <Link to='#' className="footer-social--link">
-                    twitter         
+                    <i>{twitter}</i>     
                 </Link>
                 <Link to='#' className="footer-social--link">
-                    linkedin         
+                    <i>{linkedin}</i>         
                 </Link>
             </div>
         </section>
