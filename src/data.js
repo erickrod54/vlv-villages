@@ -3,10 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faClock, faCaretSquareLeft, faCaretSquareRight } from "@fortawesome/free-regular-svg-icons";
 import { faFacebook, faInstagram, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
-/**vlv-villages version 3.19 - data js -
+/**vlv-villages version 4.02 - data js -
  * Features:
  * 
- *   --> Building 'footerBrandIcons'.  
+ *   --> Changing name 'imagebkg' to 'socialicons'.  
  * 
  * Note: the brand icons has been installed
  * this way:
@@ -25,22 +25,22 @@ import { faFacebook, faInstagram, faTwitter, faLinkedinIn } from '@fortawesome/f
     {
         id:1,
         title:'facebook',
-        imagesbkg: facebook
+        socialicons: facebook
     },
     {
         id:2,
         title:'instagram',
-        imagesbkg: instagram
+        socialicons: instagram
     },
     {
         id:3,
         title:'twitter',
-        imagesbkg: twitter
+        socialicons: twitter
     },
     {
         id:4,
         title:'linkedin',
-        imagesbkg: linkedin
+        socialicons: linkedin
     },
 ]
 
