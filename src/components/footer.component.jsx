@@ -3,11 +3,10 @@ import { Link } from 'react-router-dom';
 import styled from "styled-components";
 import { useVLVillagesContext } from "../context";
 
-/**vlv-villages version 4.01 - FooterComponent -
+/**vlv-villages version 4.02 - FooterComponent -
  * Features:
  * 
- *   --> Building 'FooterWrapper' and 
- *       placing footer styles and animations.
+ *   --> Changing name 'imagebkg' to 'socialicons'.
  * 
  * Note: pending to make dynamic data and to add
  * the map of the data
@@ -18,10 +17,10 @@ const FooterComponent = () => {
     const { footerBrandIcons } = useVLVillagesContext()
     console.log('this is the data for footerBrandIcons ==>',footerBrandIcons)
     
-    const facebook  = footerBrandIcons[0].imagesbkg
-    const instagram = footerBrandIcons[1].imagesbkg
-    const twitter   = footerBrandIcons[2].imagesbkg
-    const linkedin  = footerBrandIcons[3].imagesbkg
+    const facebook  = footerBrandIcons[0].socialicons;
+    const instagram = footerBrandIcons[1].socialicons;
+    const twitter   = footerBrandIcons[2].socialicons;
+    const linkedin  = footerBrandIcons[3].socialicons;
     
     return(
         <FooterWrapper id="footer">
