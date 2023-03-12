@@ -2,9 +2,9 @@ import React from "react";
 import { HomePage, VillasPage, AboutPage, ContactPage } from './pages/index.pages'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-/**vlv-villages version 1.04 - App js - Features:
+/**vlv-villages version 4.00 - App js - Features:
  * 
- *   --> Implementing routing.
+ *   --> Clearing titles.
  * 
  * Note: pending to implemnt the navigation by 
  * building each page in detail
@@ -13,7 +13,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 function App() {
   return (
     <>
-      <h2>VLV - luxury villages</h2>
       <Router>
         <Routes>
           <Route path='/' element={<HomePage />}/>
