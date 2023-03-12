@@ -1,6 +1,9 @@
-/**vlv-villages version 4.00 - index.css - Features: 
+/**vlv-villages version 4.01 - index.css - Features: 
  *
- *   --> Finishing Footer Styles.      
+ *   --> Migrating 'Footer' Styles to its own 
+ *       Component.      
+ *
+ *   --> Keeping global styles.
  *
  * Note: Changes for this file are gonna applied
  *later 
@@ -441,57 +444,7 @@ section#footer{
   place-items: center;
 }
 
-.footer-social--link:link,
-.footer-social--link:visited{
-  margin-top: 4rem;
-  display: inline-block;
-  background-color: var(--color-secondary);
-  border-radius: 4rem;
-  margin-right: 1rem;
-  box-shadow: 0.5rem 0.5rem 2rem 0.5rem var(--color-secondary-light), -0.5rem -0.5rem 2rem 0.5rem var(--color-secondary-light);
-  transform: scale(0.8);
-  animation: social 3s linear infinite;
-}
 
-@keyframes social {
-  0%{
-    opacity: 0;
-  }
-
-  50%{
-    opacity: 1;
-    transform: scale(1.2);
-  }
-
-  100%{
-    opacity: 0;
-  }
-}
-
-.footer-social--link i{
-  font-size: 2rem;
-  color: var(--color-primary);
-}
-
-.footer-social--link:link:nth-child(1),
-.footer-social--link:visited:nth-child(1){
-  animation-delay: 0s;
-}
-
-.footer-social--link:link:nth-child(2),
-.footer-social--link:visited:nth-child(2){
-  animation-delay: 0.3s;
-}
-
-.footer-social--link:link:nth-child(3),
-.footer-social--link:visited:nth-child(3){
-  animation-delay: 0.6s;
-}
-
-.footer-social--link:link:nth-child(4),
-.footer-social--link:visited:nth-child(4){
-  animation-delay: 0.9s;
-}
 /*footer ---- end - global styles*****/
 
 /*Media queries for the header  -- start**/
