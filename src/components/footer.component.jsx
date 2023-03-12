@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom';
 import styled from "styled-components";
 import { useVLVillagesContext } from "../context";
 
-/**vlv-villages version 4.02 - FooterComponent -
+/**vlv-villages version 4.03 - FooterComponent -
  * Features:
  * 
- *   --> Changing name 'imagebkg' to 'socialicons'.
+ *   --> Mapping 'footerBrandIcons' and displaying 
+ *      icons dynamicly in the Markup.
  * 
  * Note: pending to make dynamic data and to add
  * the map of the data
@@ -15,29 +16,20 @@ import { useVLVillagesContext } from "../context";
 const FooterComponent = () => {
     
     const { footerBrandIcons } = useVLVillagesContext()
-    console.log('this is the data for footerBrandIcons ==>',footerBrandIcons)
-    
-    const facebook  = footerBrandIcons[0].socialicons;
-    const instagram = footerBrandIcons[1].socialicons;
-    const twitter   = footerBrandIcons[2].socialicons;
-    const linkedin  = footerBrandIcons[3].socialicons;
+    //console.log('this is the data for footerBrandIcons ==>',footerBrandIcons)
     
     return(
         <FooterWrapper id="footer">
             <p>All Rights Reserved. &copy; VLV</p>
             <div className="footer-social">
-                <Link to='#' className="footer-social--link">
-                    <i>{facebook}</i>
-                </Link>
-                <Link to='#' className="footer-social--link">
-                    <i>{instagram}</i> 
-                </Link>
-                <Link to='#' className="footer-social--link">
-                    <i>{twitter}</i>     
-                </Link>
-                <Link to='#' className="footer-social--link">
-                    <i>{linkedin}</i>         
-                </Link>
+                {footerBrandIcons.map((icon) => {
+                    const { id, socialicons } = icon
+                    return(
+                        <Link key={id} to='#' className="footer-social--link">
+                            <i>{socialicons}</i>         
+                        </Link>
+                    )
+                })}
             </div>
         </FooterWrapper>
     )
