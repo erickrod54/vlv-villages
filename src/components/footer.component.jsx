@@ -9,7 +9,8 @@ import { useVLVillagesContext } from "../context";
  *   --> Building 'FooterWrapper' and 
  *       placing footer styles and animations.
  * 
- * Note: pending to make dynamic data
+ * Note: pending to make dynamic data and to add
+ * the map of the data
  */
 
 const FooterComponent = () => {
