@@ -3,10 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faClock, faCaretSquareLeft, faCaretSquareRight } from "@fortawesome/free-regular-svg-icons";
 import { faFacebook, faInstagram, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
-/**vlv-villages version 4.02 - data js -
+/**vlv-villages version 4.04 - data js -
  * Features:
  * 
- *   --> Changing name 'imagebkg' to 'socialicons'.  
+ *   --> Building 'featuresContentData'.  
  * 
  * Note: the brand icons has been installed
  * this way:
@@ -15,6 +15,19 @@ import { faFacebook, faInstagram, faTwitter, faLinkedinIn } from '@fortawesome/f
  * 
  * .
  */
+
+export const featuresContentData = [
+    {
+        id:1,
+        title:'Cocktail Package',
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut consequat semper viverra nam libero justo. Leo vel orci porta non pulvinar neque laoreet suspendisse'
+    },
+    {
+        id:2,
+        title:'Surfing Package',
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut consequat semper viverra nam libero justo. Leo vel orci porta non pulvinar neque laoreet suspendisse'
+    },
+]
 
  export const facebook = <FontAwesomeIcon icon={faFacebook} />
  export const instagram = <FontAwesomeIcon icon={faInstagram} />
