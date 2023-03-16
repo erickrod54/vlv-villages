@@ -1,9 +1,12 @@
 import React from "react";
+import { useVLVillagesContext } from "../context";
 
-/**vlv-villages version 3.12 - FeaturesContent  -
+/**vlv-villages version 4.04 - FeaturesContent  -
  * Features:
  * 
- *   --> Building markup for 'FeaturesContent'.
+ *   --> Destructuring from the context 'featuresContentData'.
+ * 
+ *   --> Testing data.    
  * 
  * Note: Changes will be done later in this 
  * component
@@ -11,6 +14,9 @@ import React from "react";
 
 
 const FeaturesContent = () => {
+
+    const { featuresContentData } = useVLVillagesContext()
+    console.log('this is the data for FeaturesContent ==>', featuresContentData)
 
     return(
         <section id="features-content">
