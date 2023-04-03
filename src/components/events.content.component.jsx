@@ -1,31 +1,41 @@
 import React from "react";
+import { useVLVillagesContext } from "../context";
 
-/**vlv-villages version 2.13 - EventsContent 
+/**vlv-villages version 4.06 - EventsContent 
  * - Features:
  * 
- *   --> Building 'EventsContent' basic Component.  
+ *   --> Destructuring 'EventsContentData' and
+ *       placing it in the Markup.  
  * 
  * Note: Pending to separate the data from the markup.
  */
 
 const EventsContent = () => {
 
+    const { EventsContentData } = useVLVillagesContext();
+    console.log('EventsContentData ==>', EventsContentData)
+
+    const title1 = EventsContentData[0].title;
+    const description1 = EventsContentData[0].description;
+    const title2 = EventsContentData[1].title;
+    const description2 = EventsContentData[1].description;
+
     return(
         <section id="events-content">
             <div className="events-content--event-1">
                 <h2 className="events-content--event-1--title">
-                    Beach Party
+                    {title1}
                 </h2>
                 <p className="events-content--event-1--para">
-                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut consequat semper viverra nam libero justo. Leo vel orci porta non pulvinar neque laoreet suspendisse
+                 {description1}
                 </p>
             </div>
             <div className="events-content--event-2">
                 <h2 className="events-content--event-2--title">
-                    Culture Discover
+                    {title2}
                 </h2>
                 <p className="events-content--event-2--para">
-                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut consequat semper viverra nam libero justo. Leo vel orci porta non pulvinar neque laoreet suspendisse
+                 {description2}
                 </p>
             </div>
         </section>
