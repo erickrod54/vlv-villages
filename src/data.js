@@ -3,10 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faClock, faCaretSquareLeft, faCaretSquareRight } from "@fortawesome/free-regular-svg-icons";
 import { faFacebook, faInstagram, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
-/**vlv-villages version 4.06 - data js -
+/**vlv-villages version 4.07 - data js -
  * Features:
  * 
- *   --> Building 'EventsContentData'.  
+ *   --> Building 'HeaderData'.  
  * 
  * Note: the brand icons has been installed
  * this way:
@@ -15,6 +15,21 @@ import { faFacebook, faInstagram, faTwitter, faLinkedinIn } from '@fortawesome/f
  * 
  * .
  */
+
+export const HeaderData = [
+    {
+        id:1,
+        text:'Relax your soul'  
+    },
+    {
+        id:2,
+        text:'The team of VLV welcomes you. Start relaxing your soul and enjoy your stay'
+    },
+    {
+        id:3,
+        text:'Discover more'
+    }
+]
 
 export const EventsContentData = [
     {
